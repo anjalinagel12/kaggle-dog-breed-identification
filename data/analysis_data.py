@@ -75,7 +75,16 @@ def analyse_label(label_file_path):
     for k, v in label_tuple_list:
         print("%-30s\t%d\t%.4f" % (k, v, float(v)/csv['id'].count()))
 
+def get_label_list(label_file_path):
+    import pandas as pd
+    with pd.read_csv(label_file_path) as csv:
+        label_list = csv['breed'].unique()
+        id_list = csv['id'].unique()
+    print("len(id_list):%d" % len(id_list))
+    print("len(label_list):%d" % len(label_list))
+
 if __name__ == "__main__":
     analyse_img("./test")
     analyse_img("./train")
     analyse_label("./labels.csv")
+    get_label_list("./labels.csv")
