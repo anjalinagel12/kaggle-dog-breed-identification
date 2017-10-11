@@ -72,19 +72,43 @@ def analyse_label(label_file_path):
     label_tuple_list = sorted(label_dict.items(), key=lambda item: -item[1])
 
     # result
+    idx = 0
     for k, v in label_tuple_list:
-        print("%-30s\t%d\t%.4f" % (k, v, float(v)/csv['id'].count()))
+        idx += 1
+        print("%d\t%-30s\t%d\t%.4f" % (idx, k, v, float(v)/csv['id'].count()))
 
 def get_label_list(label_file_path):
     import pandas as pd
-    with pd.read_csv(label_file_path) as csv:
-        label_list = csv['breed'].unique()
-        id_list = csv['id'].unique()
-    print("len(id_list):%d" % len(id_list))
+    csv = pd.read_csv(label_file_path)
+    label_list = csv['breed'].unique()
+    id_list = csv['id'].unique()
+    print("-----\nlen(id_list):%d" % len(id_list))
     print("len(label_list):%d" % len(label_list))
+    return label_list
+
+def generate_synset_list(label_file_path, synset_file_path="./full-synset.txt"):
+    label_list = get_label_list(label_file_path)
+    synset_list = []
+    for idx in xrange(len(label_list)):
+        label = label_list[idx]
+        line = " ".join([str(idx), label, "\n"])
+        synset_list.append(line)
+
+    with open(synset_file_path, "w") as f:
+        f.writelines(synset_list)
+
+
 
 if __name__ == "__main__":
-    analyse_img("./test")
-    analyse_img("./train")
-    analyse_label("./labels.csv")
-    get_label_list("./labels.csv")
+    # init
+    train_dir = "./train"
+    test_dir = "./test"
+    label_file_path = "./labels.csv"
+    synset_file_path = "./full-synset.txt"
+
+    # analyse
+    analyse_img(test_dir)
+    analyse_img(train_dir)
+    analyse_label(label_file_path)
+    generate_synset_list(label_file_path, synset_file_path)
+    
