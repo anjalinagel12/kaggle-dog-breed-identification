@@ -84,7 +84,7 @@ def get_label_list(label_file_path):
     id_list = csv['id'].unique()
     print("-----\nlen(id_list):%d" % len(id_list))
     print("len(label_list):%d" % len(label_list))
-    return label_list
+    return label_list, id_list
 
 def generate_synset_list(label_file_path, synset_file_path="./full-synset.txt"):
     label_list = get_label_list(label_file_path)
@@ -98,6 +98,13 @@ def generate_synset_list(label_file_path, synset_file_path="./full-synset.txt"):
         f.writelines(synset_list)
 
 
+def rearrage_train(train_dir="./train", new_train_dir="./rearraged-train"):
+    import os
+    if not os.path.exists(new_train_dir):
+        os.mkdir(new_train_dir)
+    label_list = get_label_list(label_file_path)
+
+    file_list = os.listdir(train_dir)
 
 if __name__ == "__main__":
     # init
@@ -107,8 +114,12 @@ if __name__ == "__main__":
     synset_file_path = "./full-synset.txt"
 
     # analyse
+    '''
     analyse_img(test_dir)
     analyse_img(train_dir)
     analyse_label(label_file_path)
     generate_synset_list(label_file_path, synset_file_path)
+    '''
+
+    rearrage_train(train_dir)
     
