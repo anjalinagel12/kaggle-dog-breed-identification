@@ -87,7 +87,7 @@ def get_label_list(label_file_path):
     return label_list, id_list
 
 def generate_synset_list(label_file_path, synset_file_path="./full-synset.txt"):
-    label_list = get_label_list(label_file_path)
+    label_list, id_list = get_label_list(label_file_path)
     synset_list = []
     for idx in xrange(len(label_list)):
         label = label_list[idx]
@@ -98,13 +98,34 @@ def generate_synset_list(label_file_path, synset_file_path="./full-synset.txt"):
         f.writelines(synset_list)
 
 
-def rearrage_train(train_dir="./train", new_train_dir="./rearraged-train"):
+def rearrage_train(label_file_path, train_dir="./train", new_train_dir="./rearraged-train"):
     import os
     if not os.path.exists(new_train_dir):
         os.mkdir(new_train_dir)
-    label_list = get_label_list(label_file_path)
+    label_list, id_list = get_label_list(label_file_path)
 
-    file_list = os.listdir(train_dir)
+    import pandas as pd
+    csv = pd.read_csv(label_file_path)
+
+    import shutil
+    label_dict = {}
+    for idx in xrange(len(id_list)):
+        img_id = id_list[idx]
+        img_label = csv[csv['id'].isin([img_id])]['breed'].values[0]
+        old_img_path = "/".join([train_dir, img_id + ".jpg"])
+        new_img_path = "/".join([new_train_dir, img_label, img_id + ".jpg"])
+
+        # cp
+        label_path = "/".join([new_train_dir, img_label])
+
+        # check
+        #print(idx+1, old_img_path, new_img_path, label_path)
+
+        if not os.path.exists(label_path):
+            os.mkdir(label_path)
+        shutil.copyfile(old_img_path, new_img_path)
+        print("cp %d / %d img" % (idx+1, len(id_list)))
+
 
 if __name__ == "__main__":
     # init
@@ -121,5 +142,5 @@ if __name__ == "__main__":
     generate_synset_list(label_file_path, synset_file_path)
     '''
 
-    rearrage_train(train_dir)
+    rearrage_train(label_file_path, train_dir)
     
