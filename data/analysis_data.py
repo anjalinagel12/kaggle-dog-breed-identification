@@ -98,7 +98,7 @@ def generate_synset_list(label_file_path, synset_file_path="./full-synset.txt"):
         f.writelines(synset_list)
 
 
-def rearrage_train(label_file_path, train_dir="./train", new_train_dir="./rearraged-train"):
+def rearrange_train(label_file_path, train_dir="./train", new_train_dir="./rearranged-train"):
     import os
     if not os.path.exists(new_train_dir):
         os.mkdir(new_train_dir)
@@ -127,20 +127,51 @@ def rearrage_train(label_file_path, train_dir="./train", new_train_dir="./rearra
         print("cp %d / %d img" % (idx+1, len(id_list)))
 
 
+def raw2MX(rearranged_train_dir, resolution=224, train_ratio=0.95, prefix_name="mx", quality=95):
+    import os
+    thread_num_output = os.popen('cat /proc/cpuinfo| grep "processor"| wc -l')
+    thread_num = int(thread_num_output.read())
+
+    prefix_name_list = map(str, [prefix_name, resolution, "qua", quality, "ratio", train_ratio])
+    prefix_name = "-".join(prefix_name_list)
+
+    lst_cmd = "python tools/im2rec.py --list True --recursive True --train-ratio {train_ratio} {prefix_name} {img_data_dir}".format(train_ratio=train_ratio, prefix_name=prefix_name, img_data_dir=rearranged_train_dir)
+    rec_cmd = "python tools/im2rec.py --resize {size} --quality {img_quality} --num-thread {thread_num} {prefix_name} {img_data_dir}".format(size=resolution, thread_num=thread_num, prefix_name=prefix_name, img_data_dir=rearranged_train_dir, img_quality=quality)
+    # check
+    print(lst_cmd)
+    print(rec_cmd)
+
+    # execute
+    os.system(lst_cmd)
+    os.system(rec_cmd)
+
+
+
 if __name__ == "__main__":
     # init
     train_dir = "./train"
     test_dir = "./test"
     label_file_path = "./labels.csv"
-    synset_file_path = "./full-synset.txt"
+    synset_file_path = "./full-synset.txt" # generated file
+
+    rearranged_train_dir = './rearranged-train'
+    resolution = 512
+    prefix_name = "mx"
+    train_ratio = 0.95
+    quality = 95
 
     # analyse
     '''
     analyse_img(test_dir)
     analyse_img(train_dir)
     analyse_label(label_file_path)
-    generate_synset_list(label_file_path, synset_file_path)
     '''
 
-    rearrage_train(label_file_path, train_dir)
-    
+    # prepare data for mxnet format
+    generate_synset_list(label_file_path, synset_file_path)
+    #rearrange_train(label_file_path, train_dir, rearranged_train_dir)
+    raw2MX(rearranged_train_dir,
+           resolution,
+           train_ratio,
+           prefix_name,
+           quality)
