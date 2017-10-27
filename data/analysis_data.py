@@ -158,7 +158,7 @@ if __name__ == "__main__":
     resolution = 512
     prefix_name = "mx"
     train_ratio = 0.95
-    quality = 95
+    quality = 99
 
     # analyse
     '''
