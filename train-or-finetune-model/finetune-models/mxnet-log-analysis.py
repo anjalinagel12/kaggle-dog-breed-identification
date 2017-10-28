@@ -1,12 +1,34 @@
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+
 #!/bin/python
+# -*- coding: utf-8 -*-
 
 '''
-generate summary of train log, including
-0. epoch-num, batch-num(at least)
-1. train-speed(img/sec), epoch-time(sec)
-2. train-acc, val-acc
-3. checkpoint-name
+generate a summary of train log, including terms as below:
+1. [2 terms] epoch-index, batch-num(at least)
+2. [3 terms] ave-batch-train-acc(accuracy), max-batch-trian-acc, min-batch-train-acc,
+3. [3 terms] ave-batch-train-topk-acc, max-batch-train-topk-acc, min-batch-train-topk-acc,
+4. [2 terms] val-acc, val-topk-acc,
+5. [3 terms] train-speed(image/second), max-speed, min-speed,
+6. [2 terms] consume-time(seconds for current epoch), checkpoint name.
 '''
+
+# generate header first
 header_list = ["epoch", "batchNum",
                "ave-batch-acc", "max-batch-acc", "min-batch-acc",
                "ave-batch-topk-acc", "max-batch-topk-acc", "min-batch-topk-acc",
@@ -19,6 +41,10 @@ header = "\t".join(header_list)
 debug = False#True
 
 def init():
+    """
+    1. define usage
+    2. initialize parameters: define regular expressions for different terms.
+    """
     global log_dir
     import sys
 
@@ -53,6 +79,10 @@ def init():
     checkpoint_pattern = '.*Saved checkpoint to "(.*)".*'
 
 def run():
+    """
+    1. read train log according to usage;
+    2. match terms line by line according to regular expressions.
+    """
     speed_list = []
     batch_list = []
     batch_train_acc_list = []
@@ -68,6 +98,8 @@ def run():
         line = log_handle.readline()
         while line:
             line_idx += 1
+            if debug: 
+                if line_idx == 105: exit(-1)
             # check valid line
             valid_flag_list = filter(lambda ptn: ptn in line, valid_line_pattern_list)
             if debug: print "valid_flag_list:", valid_flag_list
@@ -76,7 +108,7 @@ def run():
                 line = log_handle.readline()
                 continue
 
-            if debug: print "line:"+line
+            if debug: print "line " + str(line_idx) + "\t" + line
             train_acc_res = findall(train_acc_pattern, line)
             train_topk_acc_res = findall(train_topk_acc_pattern, line)
             val_acc_res = findall(val_acc_pattern, line)
@@ -128,15 +160,30 @@ def run():
                 val_topk_acc = val_topk_acc_res[0]
                
             # Saved line (checkpoint line)
-            if "Validation-accuracy=" in line:
-                # summarize
-                max_speed = max(speed_list)
-                min_speed = min(speed_list)
-                ave_speed = sum(map(float, speed_list))/float(len(speed_list))
+            if len(batch_train_topk_acc_list) > 0:
+                epoch_end_pattern = "Validation-top_k_accuracy"
+            else:
+                epoch_end_pattern = "Validation-accuracy"
 
-                max_batch_train_acc = max(batch_train_acc_list)
-                min_batch_train_acc = min(batch_train_acc_list)
-                ave_batch_train_acc = sum(map(float, batch_train_acc_list))/float(len(batch_train_acc_list))
+            if epoch_end_pattern in line:
+                # summarize
+                if len(speed_list) != 0:
+                    max_speed = max(speed_list)
+                    min_speed = min(speed_list)
+                    ave_speed = sum(map(float, speed_list))/float(len(speed_list))
+                else:
+                    max_speed = "---"
+                    min_speed = "---"
+                    ave_speed = "---"
+
+                if len(batch_train_acc_list) != 0:
+                    max_batch_train_acc = max(batch_train_acc_list)
+                    min_batch_train_acc = min(batch_train_acc_list)
+                    ave_batch_train_acc = sum(map(float, batch_train_acc_list))/float(len(batch_train_acc_list))
+                else:
+                    max_batch_train_acc = "---"
+                    min_batch_train_acc = "---"
+                    ave_batch_train_acc = "---"
 
                 if len(batch_train_topk_acc_list) < 1:
                     max_batch_train_topk_acc = "---"
@@ -146,6 +193,7 @@ def run():
                     max_batch_train_topk_acc = max(batch_train_topk_acc_list)
                     min_batch_train_topk_acc = min(batch_train_topk_acc_list)
                     ave_batch_train_topk_acc = sum(map(float, batch_train_topk_acc_list)) / float(len(batch_train_topk_acc_list))
+                if debug: print(val_topk_acc_res, line)
                 print("{epoch}\t{batch}\t{ave_batch_train_acc}\t{max_batch_train_acc}\t{min_batch_train_acc}\t{ave_batch_train_topk_acc}\t{max_batch_train_topk_acc}\t{min_batch_train_topk_acc}\t{train_acc}\t{train_topk_acc}\t{val_acc}\t{val_topk_acc}\t{ave_speed}\t{max_speed}\t{min_speed}\t{consume_time}\t{checkpoint}".\
                       format(epoch=epoch,\
                              batch=batch,\
@@ -193,7 +241,6 @@ def run():
                 speed_list = []
                 batch_list = []
             line = log_handle.readline()
- 
 
 
 if __name__ == "__main__":
