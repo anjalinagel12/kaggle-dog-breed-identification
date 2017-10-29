@@ -52,7 +52,7 @@ if __name__ == '__main__':
         image_shape    = '3,512,512',
         pad_size       = 4,
         # train
-        batch_size     = 40,
+        batch_size     = 20,
         num_epochs     = 300,
         lr             = .01,
         lr_step_epochs = '200,250',

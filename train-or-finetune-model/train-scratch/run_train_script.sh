@@ -25,8 +25,8 @@
 #--num-layers 34 \
 #--model-prefix ./models/resnet-34-standford-512-lr-0.01
 
-printf "[resnet-101]\n"
+printf "[resnet-152]\n"
 python train_ccs-train.py \
 --network resnet \
---num-layers 101 \
---model-prefix ./models/resnet-101-standford-512-lr-0.01/resnet-101-standford-512-lr-0.01
+--num-layers 152 \
+--model-prefix ./models/resnet-152-standford-512-lr-0.01/resnet-152-standford-512-lr-0.01
