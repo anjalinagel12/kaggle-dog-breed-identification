@@ -1,0 +1,2224 @@
+[resnet-34]
+INFO:root:start with arguments Namespace(batch_size=80, benchmark=0, data_nthreads=4, data_train='../../data/mx-512-qua-99-ratio-0.95_train.rec', data_val='../../data/mx-512-qua-99-ratio-0.95_val.rec', disp_batches=20, dtype='float32', gpus='0,1,2,3', image_shape='3,512,512', kv_store='device', load_epoch=None, lr=0.01, lr_factor=0.1, lr_step_epochs='200,250', max_random_aspect_ratio=0, max_random_h=36, max_random_l=50, max_random_rotate_angle=0, max_random_s=50, max_random_scale=1, max_random_shear_ratio=0, min_random_scale=1, model_prefix='./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01', mom=0.9, monitor=0, network='resnet', num_classes=120, num_epochs=300, num_examples=50000, num_layers=34, optimizer='sgd', pad_size=4, random_crop=1, random_mirror=1, rgb_mean='123.68,116.779,103.939', test_io=0, top_k=5, wd=0.0001)
+[02:13:53] src/io/iter_image_recordio_2.cc:153: ImageRecordIOParser2: ../../data/mx-512-qua-99-ratio-0.95_train.rec, use 4 threads for decoding..
+[02:13:55] src/io/iter_image_recordio_2.cc:153: ImageRecordIOParser2: ../../data/mx-512-qua-99-ratio-0.95_val.rec, use 4 threads for decoding..
+[02:13:58] src/operator/././cudnn_algoreg-inl.h:112: Running performance tests to find the best convolution algorithm, this can take a while... (setting env variable MXNET_CUDNN_AUTOTUNE_DEFAULT to 0 to disable)
+[02:14:06] src/kvstore/././comm.h:327: only 4 out of 12 GPU pairs are enabled direct access. It may affect the performance. You can set MXNET_ENABLE_GPU_P2P=0 to turn it off
+[02:14:06] src/kvstore/././comm.h:336: .v..
+[02:14:06] src/kvstore/././comm.h:336: v...
+[02:14:06] src/kvstore/././comm.h:336: ...v
+[02:14:06] src/kvstore/././comm.h:336: ..v.
+INFO:root:Epoch[0] Batch [20]	Speed: 225.67 samples/sec	accuracy=0.009524	top_k_accuracy_5=0.047024
+INFO:root:Epoch[0] Batch [40]	Speed: 231.66 samples/sec	accuracy=0.021250	top_k_accuracy_5=0.080000
+INFO:root:Epoch[0] Batch [60]	Speed: 231.35 samples/sec	accuracy=0.016875	top_k_accuracy_5=0.075625
+INFO:root:Epoch[0] Batch [80]	Speed: 230.97 samples/sec	accuracy=0.015000	top_k_accuracy_5=0.068750
+INFO:root:Epoch[0] Batch [100]	Speed: 230.86 samples/sec	accuracy=0.014375	top_k_accuracy_5=0.071875
+INFO:root:Epoch[0] Batch [120]	Speed: 230.95 samples/sec	accuracy=0.017500	top_k_accuracy_5=0.081250
+INFO:root:Epoch[0] Train-accuracy=0.012500
+INFO:root:Epoch[0] Train-top_k_accuracy_5=0.037500
+INFO:root:Epoch[0] Time cost=43.583
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0001.params"
+INFO:root:Epoch[0] Validation-accuracy=0.025000
+INFO:root:Epoch[0] Validation-top_k_accuracy_5=0.077083
+INFO:root:Epoch[1] Batch [20]	Speed: 235.78 samples/sec	accuracy=0.016667	top_k_accuracy_5=0.080357
+INFO:root:Epoch[1] Batch [40]	Speed: 228.81 samples/sec	accuracy=0.029375	top_k_accuracy_5=0.101250
+INFO:root:Epoch[1] Batch [60]	Speed: 228.58 samples/sec	accuracy=0.025000	top_k_accuracy_5=0.102500
+INFO:root:Epoch[1] Batch [80]	Speed: 228.86 samples/sec	accuracy=0.020000	top_k_accuracy_5=0.091875
+INFO:root:Epoch[1] Batch [100]	Speed: 228.55 samples/sec	accuracy=0.021875	top_k_accuracy_5=0.103125
+INFO:root:Epoch[1] Batch [120]	Speed: 228.89 samples/sec	accuracy=0.021875	top_k_accuracy_5=0.094375
+INFO:root:Epoch[1] Train-accuracy=nan
+INFO:root:Epoch[1] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[1] Time cost=42.350
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0002.params"
+INFO:root:Epoch[1] Validation-accuracy=0.026786
+INFO:root:Epoch[1] Validation-top_k_accuracy_5=0.119643
+INFO:root:Epoch[2] Batch [20]	Speed: 232.11 samples/sec	accuracy=0.025595	top_k_accuracy_5=0.116667
+INFO:root:Epoch[2] Batch [40]	Speed: 225.35 samples/sec	accuracy=0.025625	top_k_accuracy_5=0.126250
+INFO:root:Epoch[2] Batch [60]	Speed: 227.23 samples/sec	accuracy=0.031875	top_k_accuracy_5=0.135625
+INFO:root:Epoch[2] Batch [80]	Speed: 226.06 samples/sec	accuracy=0.037500	top_k_accuracy_5=0.131250
+INFO:root:Epoch[2] Batch [100]	Speed: 225.46 samples/sec	accuracy=0.039375	top_k_accuracy_5=0.142500
+INFO:root:Epoch[2] Batch [120]	Speed: 225.61 samples/sec	accuracy=0.033125	top_k_accuracy_5=0.149375
+INFO:root:Epoch[2] Train-accuracy=0.025000
+INFO:root:Epoch[2] Train-top_k_accuracy_5=0.137500
+INFO:root:Epoch[2] Time cost=43.234
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0003.params"
+INFO:root:Epoch[2] Validation-accuracy=0.029167
+INFO:root:Epoch[2] Validation-top_k_accuracy_5=0.116667
+INFO:root:Epoch[3] Batch [20]	Speed: 228.75 samples/sec	accuracy=0.034524	top_k_accuracy_5=0.147024
+INFO:root:Epoch[3] Batch [40]	Speed: 222.39 samples/sec	accuracy=0.041250	top_k_accuracy_5=0.163125
+INFO:root:Epoch[3] Batch [60]	Speed: 223.14 samples/sec	accuracy=0.038750	top_k_accuracy_5=0.161875
+INFO:root:Epoch[3] Batch [80]	Speed: 224.77 samples/sec	accuracy=0.051250	top_k_accuracy_5=0.158750
+INFO:root:Epoch[3] Batch [100]	Speed: 223.14 samples/sec	accuracy=0.042500	top_k_accuracy_5=0.163750
+INFO:root:Epoch[3] Batch [120]	Speed: 221.53 samples/sec	accuracy=0.050000	top_k_accuracy_5=0.187500
+INFO:root:Epoch[3] Train-accuracy=nan
+INFO:root:Epoch[3] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[3] Time cost=43.475
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0004.params"
+INFO:root:Epoch[3] Validation-accuracy=0.039583
+INFO:root:Epoch[3] Validation-top_k_accuracy_5=0.175000
+INFO:root:Epoch[4] Batch [20]	Speed: 228.92 samples/sec	accuracy=0.049405	top_k_accuracy_5=0.184524
+INFO:root:Epoch[4] Batch [40]	Speed: 220.57 samples/sec	accuracy=0.068750	top_k_accuracy_5=0.214375
+INFO:root:Epoch[4] Batch [60]	Speed: 219.34 samples/sec	accuracy=0.056250	top_k_accuracy_5=0.193750
+INFO:root:Epoch[4] Batch [80]	Speed: 218.39 samples/sec	accuracy=0.052500	top_k_accuracy_5=0.181875
+INFO:root:Epoch[4] Batch [100]	Speed: 219.95 samples/sec	accuracy=0.065000	top_k_accuracy_5=0.201250
+INFO:root:Epoch[4] Batch [120]	Speed: 220.90 samples/sec	accuracy=0.059375	top_k_accuracy_5=0.203750
+INFO:root:Epoch[4] Train-accuracy=nan
+INFO:root:Epoch[4] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[4] Time cost=43.974
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0005.params"
+INFO:root:Epoch[4] Validation-accuracy=0.071429
+INFO:root:Epoch[4] Validation-top_k_accuracy_5=0.232143
+INFO:root:Epoch[5] Batch [20]	Speed: 224.51 samples/sec	accuracy=0.061905	top_k_accuracy_5=0.208929
+INFO:root:Epoch[5] Batch [40]	Speed: 198.25 samples/sec	accuracy=0.088125	top_k_accuracy_5=0.250000
+INFO:root:Epoch[5] Batch [60]	Speed: 221.15 samples/sec	accuracy=0.071250	top_k_accuracy_5=0.230625
+INFO:root:Epoch[5] Batch [80]	Speed: 216.95 samples/sec	accuracy=0.076250	top_k_accuracy_5=0.220625
+INFO:root:Epoch[5] Batch [100]	Speed: 219.73 samples/sec	accuracy=0.066875	top_k_accuracy_5=0.246250
+INFO:root:Epoch[5] Batch [120]	Speed: 216.36 samples/sec	accuracy=0.071875	top_k_accuracy_5=0.241250
+INFO:root:Epoch[5] Train-accuracy=0.025000
+INFO:root:Epoch[5] Train-top_k_accuracy_5=0.175000
+INFO:root:Epoch[5] Time cost=45.444
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0006.params"
+INFO:root:Epoch[5] Validation-accuracy=0.064583
+INFO:root:Epoch[5] Validation-top_k_accuracy_5=0.220833
+INFO:root:Epoch[6] Batch [20]	Speed: 227.99 samples/sec	accuracy=0.073810	top_k_accuracy_5=0.239286
+INFO:root:Epoch[6] Batch [40]	Speed: 218.79 samples/sec	accuracy=0.087500	top_k_accuracy_5=0.271875
+INFO:root:Epoch[6] Batch [60]	Speed: 210.68 samples/sec	accuracy=0.082500	top_k_accuracy_5=0.268125
+INFO:root:Epoch[6] Batch [80]	Speed: 220.40 samples/sec	accuracy=0.090000	top_k_accuracy_5=0.266250
+INFO:root:Epoch[6] Batch [100]	Speed: 204.43 samples/sec	accuracy=0.091875	top_k_accuracy_5=0.266250
+INFO:root:Epoch[6] Batch [120]	Speed: 223.82 samples/sec	accuracy=0.084375	top_k_accuracy_5=0.281250
+INFO:root:Epoch[6] Train-accuracy=nan
+INFO:root:Epoch[6] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[6] Time cost=44.773
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0007.params"
+INFO:root:Epoch[6] Validation-accuracy=0.069643
+INFO:root:Epoch[6] Validation-top_k_accuracy_5=0.257143
+INFO:root:Epoch[7] Batch [20]	Speed: 222.82 samples/sec	accuracy=0.090476	top_k_accuracy_5=0.293452
+INFO:root:Epoch[7] Batch [40]	Speed: 217.74 samples/sec	accuracy=0.102500	top_k_accuracy_5=0.314375
+INFO:root:Epoch[7] Batch [60]	Speed: 219.04 samples/sec	accuracy=0.096875	top_k_accuracy_5=0.307500
+INFO:root:Epoch[7] Batch [80]	Speed: 220.82 samples/sec	accuracy=0.090000	top_k_accuracy_5=0.288125
+INFO:root:Epoch[7] Batch [100]	Speed: 220.09 samples/sec	accuracy=0.103125	top_k_accuracy_5=0.306875
+INFO:root:Epoch[7] Batch [120]	Speed: 220.41 samples/sec	accuracy=0.096250	top_k_accuracy_5=0.335000
+INFO:root:Epoch[7] Train-accuracy=nan
+INFO:root:Epoch[7] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[7] Time cost=44.204
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0008.params"
+INFO:root:Epoch[7] Validation-accuracy=0.077083
+INFO:root:Epoch[7] Validation-top_k_accuracy_5=0.256250
+INFO:root:Epoch[8] Batch [20]	Speed: 226.96 samples/sec	accuracy=0.090476	top_k_accuracy_5=0.312500
+INFO:root:Epoch[8] Batch [40]	Speed: 221.47 samples/sec	accuracy=0.116250	top_k_accuracy_5=0.331875
+INFO:root:Epoch[8] Batch [60]	Speed: 220.28 samples/sec	accuracy=0.112500	top_k_accuracy_5=0.343125
+INFO:root:Epoch[8] Batch [80]	Speed: 219.01 samples/sec	accuracy=0.108750	top_k_accuracy_5=0.325625
+INFO:root:Epoch[8] Batch [100]	Speed: 216.35 samples/sec	accuracy=0.108750	top_k_accuracy_5=0.335625
+INFO:root:Epoch[8] Batch [120]	Speed: 221.06 samples/sec	accuracy=0.125625	top_k_accuracy_5=0.351250
+INFO:root:Epoch[8] Train-accuracy=0.150000
+INFO:root:Epoch[8] Train-top_k_accuracy_5=0.425000
+INFO:root:Epoch[8] Time cost=44.703
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0009.params"
+INFO:root:Epoch[8] Validation-accuracy=0.097917
+INFO:root:Epoch[8] Validation-top_k_accuracy_5=0.322917
+INFO:root:Epoch[9] Batch [20]	Speed: 227.93 samples/sec	accuracy=0.115476	top_k_accuracy_5=0.350000
+INFO:root:Epoch[9] Batch [40]	Speed: 220.32 samples/sec	accuracy=0.140000	top_k_accuracy_5=0.383125
+INFO:root:Epoch[9] Batch [60]	Speed: 223.20 samples/sec	accuracy=0.131250	top_k_accuracy_5=0.385625
+INFO:root:Epoch[9] Batch [80]	Speed: 219.77 samples/sec	accuracy=0.123125	top_k_accuracy_5=0.373750
+INFO:root:Epoch[9] Batch [100]	Speed: 217.97 samples/sec	accuracy=0.118750	top_k_accuracy_5=0.364375
+INFO:root:Epoch[9] Batch [120]	Speed: 222.47 samples/sec	accuracy=0.132500	top_k_accuracy_5=0.376250
+INFO:root:Epoch[9] Train-accuracy=nan
+INFO:root:Epoch[9] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[9] Time cost=43.846
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0010.params"
+INFO:root:Epoch[9] Validation-accuracy=0.075000
+INFO:root:Epoch[9] Validation-top_k_accuracy_5=0.283929
+INFO:root:Epoch[10] Batch [20]	Speed: 227.61 samples/sec	accuracy=0.134524	top_k_accuracy_5=0.367857
+INFO:root:Epoch[10] Batch [40]	Speed: 222.83 samples/sec	accuracy=0.153125	top_k_accuracy_5=0.410625
+INFO:root:Epoch[10] Batch [60]	Speed: 219.83 samples/sec	accuracy=0.143750	top_k_accuracy_5=0.398125
+INFO:root:Epoch[10] Batch [80]	Speed: 221.40 samples/sec	accuracy=0.134375	top_k_accuracy_5=0.386875
+INFO:root:Epoch[10] Batch [100]	Speed: 222.05 samples/sec	accuracy=0.141250	top_k_accuracy_5=0.410000
+INFO:root:Epoch[10] Batch [120]	Speed: 217.90 samples/sec	accuracy=0.153750	top_k_accuracy_5=0.418125
+INFO:root:Epoch[10] Train-accuracy=0.162500
+INFO:root:Epoch[10] Train-top_k_accuracy_5=0.475000
+INFO:root:Epoch[10] Time cost=44.260
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0011.params"
+INFO:root:Epoch[10] Validation-accuracy=0.114583
+INFO:root:Epoch[10] Validation-top_k_accuracy_5=0.370833
+INFO:root:Epoch[11] Batch [20]	Speed: 226.32 samples/sec	accuracy=0.152381	top_k_accuracy_5=0.416071
+INFO:root:Epoch[11] Batch [40]	Speed: 220.32 samples/sec	accuracy=0.178750	top_k_accuracy_5=0.439375
+INFO:root:Epoch[11] Batch [60]	Speed: 220.14 samples/sec	accuracy=0.161250	top_k_accuracy_5=0.431250
+INFO:root:Epoch[11] Batch [80]	Speed: 221.42 samples/sec	accuracy=0.151875	top_k_accuracy_5=0.407500
+INFO:root:Epoch[11] Batch [100]	Speed: 221.43 samples/sec	accuracy=0.150625	top_k_accuracy_5=0.434375
+INFO:root:Epoch[11] Batch [120]	Speed: 214.69 samples/sec	accuracy=0.153750	top_k_accuracy_5=0.456250
+INFO:root:Epoch[11] Train-accuracy=nan
+INFO:root:Epoch[11] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[11] Time cost=44.102
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0012.params"
+INFO:root:Epoch[11] Validation-accuracy=0.133929
+INFO:root:Epoch[11] Validation-top_k_accuracy_5=0.396429
+INFO:root:Epoch[12] Batch [20]	Speed: 227.35 samples/sec	accuracy=0.172024	top_k_accuracy_5=0.434524
+INFO:root:Epoch[12] Batch [40]	Speed: 221.00 samples/sec	accuracy=0.195625	top_k_accuracy_5=0.476875
+INFO:root:Epoch[12] Batch [60]	Speed: 220.61 samples/sec	accuracy=0.166875	top_k_accuracy_5=0.457500
+INFO:root:Epoch[12] Batch [80]	Speed: 221.85 samples/sec	accuracy=0.167500	top_k_accuracy_5=0.446250
+INFO:root:Epoch[12] Batch [100]	Speed: 218.63 samples/sec	accuracy=0.173125	top_k_accuracy_5=0.471250
+INFO:root:Epoch[12] Batch [120]	Speed: 222.87 samples/sec	accuracy=0.188125	top_k_accuracy_5=0.469375
+INFO:root:Epoch[12] Train-accuracy=nan
+INFO:root:Epoch[12] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[12] Time cost=43.837
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0013.params"
+INFO:root:Epoch[12] Validation-accuracy=0.152083
+INFO:root:Epoch[12] Validation-top_k_accuracy_5=0.393750
+INFO:root:Epoch[13] Batch [20]	Speed: 225.35 samples/sec	accuracy=0.168452	top_k_accuracy_5=0.450000
+INFO:root:Epoch[13] Batch [40]	Speed: 218.90 samples/sec	accuracy=0.216250	top_k_accuracy_5=0.498750
+INFO:root:Epoch[13] Batch [60]	Speed: 222.56 samples/sec	accuracy=0.205000	top_k_accuracy_5=0.501875
+INFO:root:Epoch[13] Batch [80]	Speed: 218.56 samples/sec	accuracy=0.191250	top_k_accuracy_5=0.483750
+INFO:root:Epoch[13] Batch [100]	Speed: 217.34 samples/sec	accuracy=0.185625	top_k_accuracy_5=0.492500
+INFO:root:Epoch[13] Batch [120]	Speed: 222.40 samples/sec	accuracy=0.196875	top_k_accuracy_5=0.485000
+INFO:root:Epoch[13] Train-accuracy=0.225000
+INFO:root:Epoch[13] Train-top_k_accuracy_5=0.437500
+INFO:root:Epoch[13] Time cost=44.422
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0014.params"
+INFO:root:Epoch[13] Validation-accuracy=0.097917
+INFO:root:Epoch[13] Validation-top_k_accuracy_5=0.333333
+INFO:root:Epoch[14] Batch [20]	Speed: 224.81 samples/sec	accuracy=0.202976	top_k_accuracy_5=0.495238
+INFO:root:Epoch[14] Batch [40]	Speed: 220.64 samples/sec	accuracy=0.217500	top_k_accuracy_5=0.521250
+INFO:root:Epoch[14] Batch [60]	Speed: 221.02 samples/sec	accuracy=0.214375	top_k_accuracy_5=0.521250
+INFO:root:Epoch[14] Batch [80]	Speed: 221.41 samples/sec	accuracy=0.216875	top_k_accuracy_5=0.506250
+INFO:root:Epoch[14] Batch [100]	Speed: 220.04 samples/sec	accuracy=0.195000	top_k_accuracy_5=0.528125
+INFO:root:Epoch[14] Batch [120]	Speed: 223.50 samples/sec	accuracy=0.218125	top_k_accuracy_5=0.530000
+INFO:root:Epoch[14] Train-accuracy=nan
+INFO:root:Epoch[14] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[14] Time cost=43.895
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0015.params"
+INFO:root:Epoch[14] Validation-accuracy=0.103571
+INFO:root:Epoch[14] Validation-top_k_accuracy_5=0.385714
+INFO:root:Epoch[15] Batch [20]	Speed: 227.39 samples/sec	accuracy=0.214286	top_k_accuracy_5=0.520238
+INFO:root:Epoch[15] Batch [40]	Speed: 220.00 samples/sec	accuracy=0.246875	top_k_accuracy_5=0.565000
+INFO:root:Epoch[15] Batch [60]	Speed: 219.94 samples/sec	accuracy=0.249375	top_k_accuracy_5=0.538125
+INFO:root:Epoch[15] Batch [80]	Speed: 222.68 samples/sec	accuracy=0.211250	top_k_accuracy_5=0.528750
+INFO:root:Epoch[15] Batch [100]	Speed: 218.12 samples/sec	accuracy=0.219375	top_k_accuracy_5=0.541875
+INFO:root:Epoch[15] Batch [120]	Speed: 224.68 samples/sec	accuracy=0.241875	top_k_accuracy_5=0.548750
+INFO:root:Epoch[15] Train-accuracy=nan
+INFO:root:Epoch[15] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[15] Time cost=43.813
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0016.params"
+INFO:root:Epoch[15] Validation-accuracy=0.131250
+INFO:root:Epoch[15] Validation-top_k_accuracy_5=0.377083
+INFO:root:Epoch[16] Batch [20]	Speed: 226.83 samples/sec	accuracy=0.235119	top_k_accuracy_5=0.558929
+INFO:root:Epoch[16] Batch [40]	Speed: 221.96 samples/sec	accuracy=0.273125	top_k_accuracy_5=0.570625
+INFO:root:Epoch[16] Batch [60]	Speed: 221.47 samples/sec	accuracy=0.256250	top_k_accuracy_5=0.570625
+INFO:root:Epoch[16] Batch [80]	Speed: 222.89 samples/sec	accuracy=0.245625	top_k_accuracy_5=0.563125
+INFO:root:Epoch[16] Batch [100]	Speed: 222.34 samples/sec	accuracy=0.259375	top_k_accuracy_5=0.570625
+INFO:root:Epoch[16] Batch [120]	Speed: 224.39 samples/sec	accuracy=0.268125	top_k_accuracy_5=0.598750
+INFO:root:Epoch[16] Train-accuracy=0.262500
+INFO:root:Epoch[16] Train-top_k_accuracy_5=0.612500
+INFO:root:Epoch[16] Time cost=44.208
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0017.params"
+INFO:root:Epoch[16] Validation-accuracy=0.144643
+INFO:root:Epoch[16] Validation-top_k_accuracy_5=0.439286
+INFO:root:Epoch[17] Batch [20]	Speed: 227.48 samples/sec	accuracy=0.272024	top_k_accuracy_5=0.564286
+INFO:root:Epoch[17] Batch [40]	Speed: 222.64 samples/sec	accuracy=0.292500	top_k_accuracy_5=0.606875
+INFO:root:Epoch[17] Batch [60]	Speed: 221.74 samples/sec	accuracy=0.269375	top_k_accuracy_5=0.597500
+INFO:root:Epoch[17] Batch [80]	Speed: 222.84 samples/sec	accuracy=0.277500	top_k_accuracy_5=0.616250
+INFO:root:Epoch[17] Batch [100]	Speed: 221.84 samples/sec	accuracy=0.275625	top_k_accuracy_5=0.606250
+INFO:root:Epoch[17] Batch [120]	Speed: 220.82 samples/sec	accuracy=0.283750	top_k_accuracy_5=0.615625
+INFO:root:Epoch[17] Train-accuracy=nan
+INFO:root:Epoch[17] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[17] Time cost=43.678
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0018.params"
+INFO:root:Epoch[17] Validation-accuracy=0.114583
+INFO:root:Epoch[17] Validation-top_k_accuracy_5=0.335417
+INFO:root:Epoch[18] Batch [20]	Speed: 227.16 samples/sec	accuracy=0.270833	top_k_accuracy_5=0.598214
+INFO:root:Epoch[18] Batch [40]	Speed: 223.13 samples/sec	accuracy=0.298750	top_k_accuracy_5=0.617500
+INFO:root:Epoch[18] Batch [60]	Speed: 220.24 samples/sec	accuracy=0.293750	top_k_accuracy_5=0.608750
+INFO:root:Epoch[18] Batch [80]	Speed: 216.80 samples/sec	accuracy=0.280000	top_k_accuracy_5=0.605000
+INFO:root:Epoch[18] Batch [100]	Speed: 219.56 samples/sec	accuracy=0.296875	top_k_accuracy_5=0.621250
+INFO:root:Epoch[18] Batch [120]	Speed: 219.70 samples/sec	accuracy=0.298750	top_k_accuracy_5=0.625000
+INFO:root:Epoch[18] Train-accuracy=0.300000
+INFO:root:Epoch[18] Train-top_k_accuracy_5=0.662500
+INFO:root:Epoch[18] Time cost=44.375
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0019.params"
+INFO:root:Epoch[18] Validation-accuracy=0.158333
+INFO:root:Epoch[18] Validation-top_k_accuracy_5=0.404167
+INFO:root:Epoch[19] Batch [20]	Speed: 227.03 samples/sec	accuracy=0.310119	top_k_accuracy_5=0.636905
+INFO:root:Epoch[19] Batch [40]	Speed: 223.93 samples/sec	accuracy=0.340000	top_k_accuracy_5=0.651875
+INFO:root:Epoch[19] Batch [60]	Speed: 223.61 samples/sec	accuracy=0.315625	top_k_accuracy_5=0.626875
+INFO:root:Epoch[19] Batch [80]	Speed: 223.56 samples/sec	accuracy=0.303125	top_k_accuracy_5=0.647500
+INFO:root:Epoch[19] Batch [100]	Speed: 223.08 samples/sec	accuracy=0.310000	top_k_accuracy_5=0.682500
+INFO:root:Epoch[19] Batch [120]	Speed: 226.36 samples/sec	accuracy=0.314375	top_k_accuracy_5=0.656250
+INFO:root:Epoch[19] Train-accuracy=nan
+INFO:root:Epoch[19] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[19] Time cost=43.344
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0020.params"
+INFO:root:Epoch[19] Validation-accuracy=0.244643
+INFO:root:Epoch[19] Validation-top_k_accuracy_5=0.562500
+INFO:root:Epoch[20] Batch [20]	Speed: 229.44 samples/sec	accuracy=0.330952	top_k_accuracy_5=0.645833
+INFO:root:Epoch[20] Batch [40]	Speed: 223.70 samples/sec	accuracy=0.347500	top_k_accuracy_5=0.676250
+INFO:root:Epoch[20] Batch [60]	Speed: 221.99 samples/sec	accuracy=0.330000	top_k_accuracy_5=0.674375
+INFO:root:Epoch[20] Batch [80]	Speed: 223.76 samples/sec	accuracy=0.343750	top_k_accuracy_5=0.688750
+INFO:root:Epoch[20] Batch [100]	Speed: 222.73 samples/sec	accuracy=0.351875	top_k_accuracy_5=0.686250
+INFO:root:Epoch[20] Batch [120]	Speed: 227.26 samples/sec	accuracy=0.345000	top_k_accuracy_5=0.686875
+INFO:root:Epoch[20] Train-accuracy=nan
+INFO:root:Epoch[20] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[20] Time cost=43.283
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0021.params"
+INFO:root:Epoch[20] Validation-accuracy=0.147917
+INFO:root:Epoch[20] Validation-top_k_accuracy_5=0.414583
+INFO:root:Epoch[21] Batch [20]	Speed: 228.10 samples/sec	accuracy=0.326786	top_k_accuracy_5=0.665476
+INFO:root:Epoch[21] Batch [40]	Speed: 223.39 samples/sec	accuracy=0.377500	top_k_accuracy_5=0.710625
+INFO:root:Epoch[21] Batch [60]	Speed: 223.51 samples/sec	accuracy=0.366875	top_k_accuracy_5=0.698125
+INFO:root:Epoch[21] Batch [80]	Speed: 223.94 samples/sec	accuracy=0.355625	top_k_accuracy_5=0.705000
+INFO:root:Epoch[21] Batch [100]	Speed: 223.70 samples/sec	accuracy=0.354375	top_k_accuracy_5=0.683750
+INFO:root:Epoch[21] Batch [120]	Speed: 226.69 samples/sec	accuracy=0.367500	top_k_accuracy_5=0.707500
+INFO:root:Epoch[21] Train-accuracy=0.325000
+INFO:root:Epoch[21] Train-top_k_accuracy_5=0.712500
+INFO:root:Epoch[21] Time cost=43.659
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0022.params"
+INFO:root:Epoch[21] Validation-accuracy=0.233929
+INFO:root:Epoch[21] Validation-top_k_accuracy_5=0.546429
+INFO:root:Epoch[22] Batch [20]	Speed: 228.26 samples/sec	accuracy=0.360714	top_k_accuracy_5=0.700000
+INFO:root:Epoch[22] Batch [40]	Speed: 221.73 samples/sec	accuracy=0.393125	top_k_accuracy_5=0.712500
+INFO:root:Epoch[22] Batch [60]	Speed: 224.61 samples/sec	accuracy=0.366875	top_k_accuracy_5=0.726875
+INFO:root:Epoch[22] Batch [80]	Speed: 223.18 samples/sec	accuracy=0.391875	top_k_accuracy_5=0.731250
+INFO:root:Epoch[22] Batch [100]	Speed: 222.75 samples/sec	accuracy=0.388125	top_k_accuracy_5=0.722500
+INFO:root:Epoch[22] Batch [120]	Speed: 225.33 samples/sec	accuracy=0.386250	top_k_accuracy_5=0.729375
+INFO:root:Epoch[22] Train-accuracy=nan
+INFO:root:Epoch[22] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[22] Time cost=43.380
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0023.params"
+INFO:root:Epoch[22] Validation-accuracy=0.258333
+INFO:root:Epoch[22] Validation-top_k_accuracy_5=0.552083
+INFO:root:Epoch[23] Batch [20]	Speed: 227.21 samples/sec	accuracy=0.371429	top_k_accuracy_5=0.717262
+INFO:root:Epoch[23] Batch [40]	Speed: 222.26 samples/sec	accuracy=0.400625	top_k_accuracy_5=0.743125
+INFO:root:Epoch[23] Batch [60]	Speed: 221.55 samples/sec	accuracy=0.377500	top_k_accuracy_5=0.708125
+INFO:root:Epoch[23] Batch [80]	Speed: 223.59 samples/sec	accuracy=0.407500	top_k_accuracy_5=0.752500
+INFO:root:Epoch[23] Batch [100]	Speed: 220.72 samples/sec	accuracy=0.407500	top_k_accuracy_5=0.755000
+INFO:root:Epoch[23] Batch [120]	Speed: 223.41 samples/sec	accuracy=0.420625	top_k_accuracy_5=0.765625
+INFO:root:Epoch[23] Train-accuracy=nan
+INFO:root:Epoch[23] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[23] Time cost=43.844
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0024.params"
+INFO:root:Epoch[23] Validation-accuracy=0.195833
+INFO:root:Epoch[23] Validation-top_k_accuracy_5=0.485417
+INFO:root:Epoch[24] Batch [20]	Speed: 230.35 samples/sec	accuracy=0.402976	top_k_accuracy_5=0.726190
+INFO:root:Epoch[24] Batch [40]	Speed: 223.52 samples/sec	accuracy=0.420000	top_k_accuracy_5=0.756875
+INFO:root:Epoch[24] Batch [60]	Speed: 224.24 samples/sec	accuracy=0.386875	top_k_accuracy_5=0.730000
+INFO:root:Epoch[24] Batch [80]	Speed: 222.71 samples/sec	accuracy=0.432500	top_k_accuracy_5=0.760000
+INFO:root:Epoch[24] Batch [100]	Speed: 224.85 samples/sec	accuracy=0.426250	top_k_accuracy_5=0.755625
+INFO:root:Epoch[24] Batch [120]	Speed: 225.26 samples/sec	accuracy=0.412500	top_k_accuracy_5=0.759375
+INFO:root:Epoch[24] Train-accuracy=0.412500
+INFO:root:Epoch[24] Train-top_k_accuracy_5=0.812500
+INFO:root:Epoch[24] Time cost=43.846
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0025.params"
+INFO:root:Epoch[24] Validation-accuracy=0.262500
+INFO:root:Epoch[24] Validation-top_k_accuracy_5=0.632143
+INFO:root:Epoch[25] Batch [20]	Speed: 230.30 samples/sec	accuracy=0.419643	top_k_accuracy_5=0.742857
+INFO:root:Epoch[25] Batch [40]	Speed: 222.46 samples/sec	accuracy=0.430000	top_k_accuracy_5=0.764375
+INFO:root:Epoch[25] Batch [60]	Speed: 223.01 samples/sec	accuracy=0.438750	top_k_accuracy_5=0.756250
+INFO:root:Epoch[25] Batch [80]	Speed: 224.09 samples/sec	accuracy=0.449375	top_k_accuracy_5=0.777500
+INFO:root:Epoch[25] Batch [100]	Speed: 224.13 samples/sec	accuracy=0.433125	top_k_accuracy_5=0.769375
+INFO:root:Epoch[25] Batch [120]	Speed: 224.05 samples/sec	accuracy=0.431875	top_k_accuracy_5=0.776875
+INFO:root:Epoch[25] Train-accuracy=nan
+INFO:root:Epoch[25] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[25] Time cost=43.306
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0026.params"
+INFO:root:Epoch[25] Validation-accuracy=0.264583
+INFO:root:Epoch[25] Validation-top_k_accuracy_5=0.610417
+INFO:root:Epoch[26] Batch [20]	Speed: 229.32 samples/sec	accuracy=0.421429	top_k_accuracy_5=0.760714
+INFO:root:Epoch[26] Batch [40]	Speed: 222.45 samples/sec	accuracy=0.465000	top_k_accuracy_5=0.786875
+INFO:root:Epoch[26] Batch [60]	Speed: 221.40 samples/sec	accuracy=0.436250	top_k_accuracy_5=0.778125
+INFO:root:Epoch[26] Batch [80]	Speed: 223.50 samples/sec	accuracy=0.456875	top_k_accuracy_5=0.798750
+INFO:root:Epoch[26] Batch [100]	Speed: 224.04 samples/sec	accuracy=0.442500	top_k_accuracy_5=0.786875
+INFO:root:Epoch[26] Batch [120]	Speed: 224.94 samples/sec	accuracy=0.452500	top_k_accuracy_5=0.793125
+INFO:root:Epoch[26] Train-accuracy=0.450000
+INFO:root:Epoch[26] Train-top_k_accuracy_5=0.812500
+INFO:root:Epoch[26] Time cost=43.802
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0027.params"
+INFO:root:Epoch[26] Validation-accuracy=0.262500
+INFO:root:Epoch[26] Validation-top_k_accuracy_5=0.569643
+INFO:root:Epoch[27] Batch [20]	Speed: 228.60 samples/sec	accuracy=0.464881	top_k_accuracy_5=0.779167
+INFO:root:Epoch[27] Batch [40]	Speed: 224.49 samples/sec	accuracy=0.471250	top_k_accuracy_5=0.803750
+INFO:root:Epoch[27] Batch [60]	Speed: 223.64 samples/sec	accuracy=0.460625	top_k_accuracy_5=0.786875
+INFO:root:Epoch[27] Batch [80]	Speed: 224.09 samples/sec	accuracy=0.478125	top_k_accuracy_5=0.806250
+INFO:root:Epoch[27] Batch [100]	Speed: 224.38 samples/sec	accuracy=0.473125	top_k_accuracy_5=0.802500
+INFO:root:Epoch[27] Batch [120]	Speed: 225.10 samples/sec	accuracy=0.490000	top_k_accuracy_5=0.818750
+INFO:root:Epoch[27] Train-accuracy=nan
+INFO:root:Epoch[27] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[27] Time cost=43.254
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0028.params"
+INFO:root:Epoch[27] Validation-accuracy=0.270833
+INFO:root:Epoch[27] Validation-top_k_accuracy_5=0.585417
+INFO:root:Epoch[28] Batch [20]	Speed: 229.39 samples/sec	accuracy=0.469048	top_k_accuracy_5=0.795238
+INFO:root:Epoch[28] Batch [40]	Speed: 222.42 samples/sec	accuracy=0.490000	top_k_accuracy_5=0.813750
+INFO:root:Epoch[28] Batch [60]	Speed: 223.18 samples/sec	accuracy=0.470625	top_k_accuracy_5=0.793125
+INFO:root:Epoch[28] Batch [80]	Speed: 223.87 samples/sec	accuracy=0.493125	top_k_accuracy_5=0.807500
+INFO:root:Epoch[28] Batch [100]	Speed: 222.48 samples/sec	accuracy=0.506875	top_k_accuracy_5=0.823125
+INFO:root:Epoch[28] Batch [120]	Speed: 224.94 samples/sec	accuracy=0.493750	top_k_accuracy_5=0.835000
+INFO:root:Epoch[28] Train-accuracy=nan
+INFO:root:Epoch[28] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[28] Time cost=43.413
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0029.params"
+INFO:root:Epoch[28] Validation-accuracy=0.206250
+INFO:root:Epoch[28] Validation-top_k_accuracy_5=0.456250
+INFO:root:Epoch[29] Batch [20]	Speed: 228.64 samples/sec	accuracy=0.480952	top_k_accuracy_5=0.820833
+INFO:root:Epoch[29] Batch [40]	Speed: 223.25 samples/sec	accuracy=0.515625	top_k_accuracy_5=0.840000
+INFO:root:Epoch[29] Batch [60]	Speed: 223.09 samples/sec	accuracy=0.498125	top_k_accuracy_5=0.820000
+INFO:root:Epoch[29] Batch [80]	Speed: 222.48 samples/sec	accuracy=0.528125	top_k_accuracy_5=0.841875
+INFO:root:Epoch[29] Batch [100]	Speed: 219.57 samples/sec	accuracy=0.502500	top_k_accuracy_5=0.841875
+INFO:root:Epoch[29] Batch [120]	Speed: 222.71 samples/sec	accuracy=0.510625	top_k_accuracy_5=0.838125
+INFO:root:Epoch[29] Train-accuracy=0.575000
+INFO:root:Epoch[29] Train-top_k_accuracy_5=0.850000
+INFO:root:Epoch[29] Time cost=43.972
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0030.params"
+INFO:root:Epoch[29] Validation-accuracy=0.251786
+INFO:root:Epoch[29] Validation-top_k_accuracy_5=0.621429
+INFO:root:Epoch[30] Batch [20]	Speed: 229.43 samples/sec	accuracy=0.495833	top_k_accuracy_5=0.817857
+INFO:root:Epoch[30] Batch [40]	Speed: 222.24 samples/sec	accuracy=0.532500	top_k_accuracy_5=0.832500
+INFO:root:Epoch[30] Batch [60]	Speed: 222.39 samples/sec	accuracy=0.506875	top_k_accuracy_5=0.820000
+INFO:root:Epoch[30] Batch [80]	Speed: 219.81 samples/sec	accuracy=0.545000	top_k_accuracy_5=0.856875
+INFO:root:Epoch[30] Batch [100]	Speed: 216.14 samples/sec	accuracy=0.523125	top_k_accuracy_5=0.844375
+INFO:root:Epoch[30] Batch [120]	Speed: 224.22 samples/sec	accuracy=0.533750	top_k_accuracy_5=0.840625
+INFO:root:Epoch[30] Train-accuracy=nan
+INFO:root:Epoch[30] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[30] Time cost=43.790
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0031.params"
+INFO:root:Epoch[30] Validation-accuracy=0.189583
+INFO:root:Epoch[30] Validation-top_k_accuracy_5=0.495833
+INFO:root:Epoch[31] Batch [20]	Speed: 227.98 samples/sec	accuracy=0.544048	top_k_accuracy_5=0.841667
+INFO:root:Epoch[31] Batch [40]	Speed: 221.63 samples/sec	accuracy=0.558750	top_k_accuracy_5=0.857500
+INFO:root:Epoch[31] Batch [60]	Speed: 221.51 samples/sec	accuracy=0.527500	top_k_accuracy_5=0.845625
+INFO:root:Epoch[31] Batch [80]	Speed: 222.50 samples/sec	accuracy=0.561875	top_k_accuracy_5=0.847500
+INFO:root:Epoch[31] Batch [100]	Speed: 220.84 samples/sec	accuracy=0.560625	top_k_accuracy_5=0.861875
+INFO:root:Epoch[31] Batch [120]	Speed: 222.45 samples/sec	accuracy=0.557500	top_k_accuracy_5=0.865000
+INFO:root:Epoch[31] Train-accuracy=nan
+INFO:root:Epoch[31] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[31] Time cost=43.695
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0032.params"
+INFO:root:Epoch[31] Validation-accuracy=0.298214
+INFO:root:Epoch[31] Validation-top_k_accuracy_5=0.582143
+INFO:root:Epoch[32] Batch [20]	Speed: 227.85 samples/sec	accuracy=0.538095	top_k_accuracy_5=0.848214
+INFO:root:Epoch[32] Batch [40]	Speed: 224.17 samples/sec	accuracy=0.561875	top_k_accuracy_5=0.861250
+INFO:root:Epoch[32] Batch [60]	Speed: 219.69 samples/sec	accuracy=0.551250	top_k_accuracy_5=0.856875
+INFO:root:Epoch[32] Batch [80]	Speed: 221.05 samples/sec	accuracy=0.557500	top_k_accuracy_5=0.853750
+INFO:root:Epoch[32] Batch [100]	Speed: 222.14 samples/sec	accuracy=0.550625	top_k_accuracy_5=0.871250
+INFO:root:Epoch[32] Batch [120]	Speed: 221.55 samples/sec	accuracy=0.551875	top_k_accuracy_5=0.863125
+INFO:root:Epoch[32] Train-accuracy=0.650000
+INFO:root:Epoch[32] Train-top_k_accuracy_5=0.925000
+INFO:root:Epoch[32] Time cost=44.344
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0033.params"
+INFO:root:Epoch[32] Validation-accuracy=0.314583
+INFO:root:Epoch[32] Validation-top_k_accuracy_5=0.604167
+INFO:root:Epoch[33] Batch [20]	Speed: 229.35 samples/sec	accuracy=0.558929	top_k_accuracy_5=0.869048
+INFO:root:Epoch[33] Batch [40]	Speed: 221.06 samples/sec	accuracy=0.570625	top_k_accuracy_5=0.878125
+INFO:root:Epoch[33] Batch [60]	Speed: 221.07 samples/sec	accuracy=0.571250	top_k_accuracy_5=0.860625
+INFO:root:Epoch[33] Batch [80]	Speed: 222.17 samples/sec	accuracy=0.579375	top_k_accuracy_5=0.878750
+INFO:root:Epoch[33] Batch [100]	Speed: 218.90 samples/sec	accuracy=0.575625	top_k_accuracy_5=0.882500
+INFO:root:Epoch[33] Batch [120]	Speed: 222.81 samples/sec	accuracy=0.576250	top_k_accuracy_5=0.867500
+INFO:root:Epoch[33] Train-accuracy=nan
+INFO:root:Epoch[33] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[33] Time cost=43.743
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0034.params"
+INFO:root:Epoch[33] Validation-accuracy=0.320833
+INFO:root:Epoch[33] Validation-top_k_accuracy_5=0.650000
+INFO:root:Epoch[34] Batch [20]	Speed: 227.34 samples/sec	accuracy=0.564286	top_k_accuracy_5=0.876190
+INFO:root:Epoch[34] Batch [40]	Speed: 221.41 samples/sec	accuracy=0.599375	top_k_accuracy_5=0.883750
+INFO:root:Epoch[34] Batch [60]	Speed: 218.67 samples/sec	accuracy=0.595625	top_k_accuracy_5=0.888750
+INFO:root:Epoch[34] Batch [80]	Speed: 218.98 samples/sec	accuracy=0.617500	top_k_accuracy_5=0.892500
+INFO:root:Epoch[34] Batch [100]	Speed: 201.85 samples/sec	accuracy=0.596875	top_k_accuracy_5=0.884375
+INFO:root:Epoch[34] Batch [120]	Speed: 224.38 samples/sec	accuracy=0.586875	top_k_accuracy_5=0.888750
+INFO:root:Epoch[34] Train-accuracy=0.587500
+INFO:root:Epoch[34] Train-top_k_accuracy_5=0.837500
+INFO:root:Epoch[34] Time cost=44.906
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0035.params"
+INFO:root:Epoch[34] Validation-accuracy=0.269643
+INFO:root:Epoch[34] Validation-top_k_accuracy_5=0.587500
+INFO:root:Epoch[35] Batch [20]	Speed: 228.35 samples/sec	accuracy=0.588690	top_k_accuracy_5=0.883333
+INFO:root:Epoch[35] Batch [40]	Speed: 222.02 samples/sec	accuracy=0.620000	top_k_accuracy_5=0.896250
+INFO:root:Epoch[35] Batch [60]	Speed: 220.31 samples/sec	accuracy=0.608750	top_k_accuracy_5=0.887500
+INFO:root:Epoch[35] Batch [80]	Speed: 221.49 samples/sec	accuracy=0.628125	top_k_accuracy_5=0.888750
+INFO:root:Epoch[35] Batch [100]	Speed: 219.38 samples/sec	accuracy=0.610625	top_k_accuracy_5=0.896875
+INFO:root:Epoch[35] Batch [120]	Speed: 222.82 samples/sec	accuracy=0.626250	top_k_accuracy_5=0.895000
+INFO:root:Epoch[35] Train-accuracy=nan
+INFO:root:Epoch[35] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[35] Time cost=43.771
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0036.params"
+INFO:root:Epoch[35] Validation-accuracy=0.327083
+INFO:root:Epoch[35] Validation-top_k_accuracy_5=0.620833
+INFO:root:Epoch[36] Batch [20]	Speed: 228.49 samples/sec	accuracy=0.623214	top_k_accuracy_5=0.889881
+INFO:root:Epoch[36] Batch [40]	Speed: 219.31 samples/sec	accuracy=0.634375	top_k_accuracy_5=0.889375
+INFO:root:Epoch[36] Batch [60]	Speed: 217.14 samples/sec	accuracy=0.629375	top_k_accuracy_5=0.905000
+INFO:root:Epoch[36] Batch [80]	Speed: 212.89 samples/sec	accuracy=0.621250	top_k_accuracy_5=0.902500
+INFO:root:Epoch[36] Batch [100]	Speed: 220.76 samples/sec	accuracy=0.628750	top_k_accuracy_5=0.908125
+INFO:root:Epoch[36] Batch [120]	Speed: 221.68 samples/sec	accuracy=0.628125	top_k_accuracy_5=0.907500
+INFO:root:Epoch[36] Train-accuracy=nan
+INFO:root:Epoch[36] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[36] Time cost=44.256
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0037.params"
+INFO:root:Epoch[36] Validation-accuracy=0.273214
+INFO:root:Epoch[36] Validation-top_k_accuracy_5=0.591071
+INFO:root:Epoch[37] Batch [20]	Speed: 229.03 samples/sec	accuracy=0.614286	top_k_accuracy_5=0.886310
+INFO:root:Epoch[37] Batch [40]	Speed: 221.45 samples/sec	accuracy=0.640000	top_k_accuracy_5=0.907500
+INFO:root:Epoch[37] Batch [60]	Speed: 220.87 samples/sec	accuracy=0.630000	top_k_accuracy_5=0.908125
+INFO:root:Epoch[37] Batch [80]	Speed: 220.80 samples/sec	accuracy=0.641875	top_k_accuracy_5=0.908750
+INFO:root:Epoch[37] Batch [100]	Speed: 218.19 samples/sec	accuracy=0.649375	top_k_accuracy_5=0.908750
+INFO:root:Epoch[37] Batch [120]	Speed: 222.84 samples/sec	accuracy=0.641875	top_k_accuracy_5=0.915625
+INFO:root:Epoch[37] Train-accuracy=0.687500
+INFO:root:Epoch[37] Train-top_k_accuracy_5=0.912500
+INFO:root:Epoch[37] Time cost=44.146
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0038.params"
+INFO:root:Epoch[37] Validation-accuracy=0.293750
+INFO:root:Epoch[37] Validation-top_k_accuracy_5=0.595833
+INFO:root:Epoch[38] Batch [20]	Speed: 229.13 samples/sec	accuracy=0.647024	top_k_accuracy_5=0.901190
+INFO:root:Epoch[38] Batch [40]	Speed: 221.16 samples/sec	accuracy=0.648750	top_k_accuracy_5=0.913125
+INFO:root:Epoch[38] Batch [60]	Speed: 221.89 samples/sec	accuracy=0.626875	top_k_accuracy_5=0.915625
+INFO:root:Epoch[38] Batch [80]	Speed: 205.30 samples/sec	accuracy=0.652500	top_k_accuracy_5=0.919375
+INFO:root:Epoch[38] Batch [100]	Speed: 206.50 samples/sec	accuracy=0.636250	top_k_accuracy_5=0.916875
+INFO:root:Epoch[38] Batch [120]	Speed: 222.42 samples/sec	accuracy=0.666250	top_k_accuracy_5=0.933750
+INFO:root:Epoch[38] Train-accuracy=nan
+INFO:root:Epoch[38] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[38] Time cost=44.763
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0039.params"
+INFO:root:Epoch[38] Validation-accuracy=0.256250
+INFO:root:Epoch[38] Validation-top_k_accuracy_5=0.589583
+INFO:root:Epoch[39] Batch [20]	Speed: 228.21 samples/sec	accuracy=0.657738	top_k_accuracy_5=0.920833
+INFO:root:Epoch[39] Batch [40]	Speed: 222.18 samples/sec	accuracy=0.678750	top_k_accuracy_5=0.930625
+INFO:root:Epoch[39] Batch [60]	Speed: 221.30 samples/sec	accuracy=0.665000	top_k_accuracy_5=0.915000
+INFO:root:Epoch[39] Batch [80]	Speed: 220.65 samples/sec	accuracy=0.686875	top_k_accuracy_5=0.930000
+INFO:root:Epoch[39] Batch [100]	Speed: 217.45 samples/sec	accuracy=0.676875	top_k_accuracy_5=0.939375
+INFO:root:Epoch[39] Batch [120]	Speed: 221.55 samples/sec	accuracy=0.668125	top_k_accuracy_5=0.927500
+INFO:root:Epoch[39] Train-accuracy=nan
+INFO:root:Epoch[39] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[39] Time cost=43.886
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0040.params"
+INFO:root:Epoch[39] Validation-accuracy=0.301786
+INFO:root:Epoch[39] Validation-top_k_accuracy_5=0.637500
+INFO:root:Epoch[40] Batch [20]	Speed: 229.63 samples/sec	accuracy=0.659524	top_k_accuracy_5=0.926786
+INFO:root:Epoch[40] Batch [40]	Speed: 221.91 samples/sec	accuracy=0.701250	top_k_accuracy_5=0.931875
+INFO:root:Epoch[40] Batch [60]	Speed: 220.56 samples/sec	accuracy=0.673750	top_k_accuracy_5=0.928125
+INFO:root:Epoch[40] Batch [80]	Speed: 220.34 samples/sec	accuracy=0.689375	top_k_accuracy_5=0.938125
+INFO:root:Epoch[40] Batch [100]	Speed: 219.42 samples/sec	accuracy=0.713125	top_k_accuracy_5=0.940000
+INFO:root:Epoch[40] Batch [120]	Speed: 222.44 samples/sec	accuracy=0.688125	top_k_accuracy_5=0.936250
+INFO:root:Epoch[40] Train-accuracy=0.712500
+INFO:root:Epoch[40] Train-top_k_accuracy_5=0.962500
+INFO:root:Epoch[40] Time cost=44.561
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0041.params"
+INFO:root:Epoch[40] Validation-accuracy=0.270833
+INFO:root:Epoch[40] Validation-top_k_accuracy_5=0.610417
+INFO:root:Epoch[41] Batch [20]	Speed: 228.10 samples/sec	accuracy=0.703571	top_k_accuracy_5=0.933929
+INFO:root:Epoch[41] Batch [40]	Speed: 222.53 samples/sec	accuracy=0.701875	top_k_accuracy_5=0.946250
+INFO:root:Epoch[41] Batch [60]	Speed: 223.14 samples/sec	accuracy=0.685625	top_k_accuracy_5=0.931250
+INFO:root:Epoch[41] Batch [80]	Speed: 222.78 samples/sec	accuracy=0.695000	top_k_accuracy_5=0.946250
+INFO:root:Epoch[41] Batch [100]	Speed: 221.09 samples/sec	accuracy=0.704375	top_k_accuracy_5=0.935000
+INFO:root:Epoch[41] Batch [120]	Speed: 222.02 samples/sec	accuracy=0.695625	top_k_accuracy_5=0.936250
+INFO:root:Epoch[41] Train-accuracy=nan
+INFO:root:Epoch[41] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[41] Time cost=43.608
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0042.params"
+INFO:root:Epoch[41] Validation-accuracy=0.360714
+INFO:root:Epoch[41] Validation-top_k_accuracy_5=0.692857
+INFO:root:Epoch[42] Batch [20]	Speed: 227.17 samples/sec	accuracy=0.714881	top_k_accuracy_5=0.939881
+INFO:root:Epoch[42] Batch [40]	Speed: 222.59 samples/sec	accuracy=0.728125	top_k_accuracy_5=0.948125
+INFO:root:Epoch[42] Batch [60]	Speed: 223.64 samples/sec	accuracy=0.722500	top_k_accuracy_5=0.938125
+INFO:root:Epoch[42] Batch [80]	Speed: 223.08 samples/sec	accuracy=0.728125	top_k_accuracy_5=0.946875
+INFO:root:Epoch[42] Batch [100]	Speed: 223.48 samples/sec	accuracy=0.728750	top_k_accuracy_5=0.953750
+INFO:root:Epoch[42] Batch [120]	Speed: 223.42 samples/sec	accuracy=0.723750	top_k_accuracy_5=0.951250
+INFO:root:Epoch[42] Train-accuracy=0.787500
+INFO:root:Epoch[42] Train-top_k_accuracy_5=0.937500
+INFO:root:Epoch[42] Time cost=43.833
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0043.params"
+INFO:root:Epoch[42] Validation-accuracy=0.329167
+INFO:root:Epoch[42] Validation-top_k_accuracy_5=0.647917
+INFO:root:Epoch[43] Batch [20]	Speed: 229.52 samples/sec	accuracy=0.721429	top_k_accuracy_5=0.936310
+INFO:root:Epoch[43] Batch [40]	Speed: 223.24 samples/sec	accuracy=0.720000	top_k_accuracy_5=0.948750
+INFO:root:Epoch[43] Batch [60]	Speed: 222.05 samples/sec	accuracy=0.712500	top_k_accuracy_5=0.946250
+INFO:root:Epoch[43] Batch [80]	Speed: 223.68 samples/sec	accuracy=0.740000	top_k_accuracy_5=0.952500
+INFO:root:Epoch[43] Batch [100]	Speed: 221.97 samples/sec	accuracy=0.747500	top_k_accuracy_5=0.953750
+INFO:root:Epoch[43] Batch [120]	Speed: 225.30 samples/sec	accuracy=0.719375	top_k_accuracy_5=0.953125
+INFO:root:Epoch[43] Train-accuracy=nan
+INFO:root:Epoch[43] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[43] Time cost=43.387
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0044.params"
+INFO:root:Epoch[43] Validation-accuracy=0.306250
+INFO:root:Epoch[43] Validation-top_k_accuracy_5=0.639583
+INFO:root:Epoch[44] Batch [20]	Speed: 228.32 samples/sec	accuracy=0.738095	top_k_accuracy_5=0.947024
+INFO:root:Epoch[44] Batch [40]	Speed: 222.93 samples/sec	accuracy=0.740000	top_k_accuracy_5=0.955625
+INFO:root:Epoch[44] Batch [60]	Speed: 222.78 samples/sec	accuracy=0.728125	top_k_accuracy_5=0.950625
+INFO:root:Epoch[44] Batch [80]	Speed: 225.85 samples/sec	accuracy=0.763750	top_k_accuracy_5=0.954375
+INFO:root:Epoch[44] Batch [100]	Speed: 225.19 samples/sec	accuracy=0.744375	top_k_accuracy_5=0.961250
+INFO:root:Epoch[44] Batch [120]	Speed: 223.97 samples/sec	accuracy=0.735000	top_k_accuracy_5=0.955000
+INFO:root:Epoch[44] Train-accuracy=nan
+INFO:root:Epoch[44] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[44] Time cost=43.309
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0045.params"
+INFO:root:Epoch[44] Validation-accuracy=0.357143
+INFO:root:Epoch[44] Validation-top_k_accuracy_5=0.682143
+INFO:root:Epoch[45] Batch [20]	Speed: 227.32 samples/sec	accuracy=0.743452	top_k_accuracy_5=0.945833
+INFO:root:Epoch[45] Batch [40]	Speed: 221.94 samples/sec	accuracy=0.758750	top_k_accuracy_5=0.965625
+INFO:root:Epoch[45] Batch [60]	Speed: 224.70 samples/sec	accuracy=0.744375	top_k_accuracy_5=0.958125
+INFO:root:Epoch[45] Batch [80]	Speed: 224.41 samples/sec	accuracy=0.755000	top_k_accuracy_5=0.962500
+INFO:root:Epoch[45] Batch [100]	Speed: 222.43 samples/sec	accuracy=0.770000	top_k_accuracy_5=0.961875
+INFO:root:Epoch[45] Batch [120]	Speed: 224.93 samples/sec	accuracy=0.761250	top_k_accuracy_5=0.957500
+INFO:root:Epoch[45] Train-accuracy=0.862500
+INFO:root:Epoch[45] Train-top_k_accuracy_5=0.987500
+INFO:root:Epoch[45] Time cost=43.796
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0046.params"
+INFO:root:Epoch[45] Validation-accuracy=0.358333
+INFO:root:Epoch[45] Validation-top_k_accuracy_5=0.664583
+INFO:root:Epoch[46] Batch [20]	Speed: 228.24 samples/sec	accuracy=0.756548	top_k_accuracy_5=0.963095
+INFO:root:Epoch[46] Batch [40]	Speed: 223.12 samples/sec	accuracy=0.771250	top_k_accuracy_5=0.965625
+INFO:root:Epoch[46] Batch [60]	Speed: 222.59 samples/sec	accuracy=0.756875	top_k_accuracy_5=0.961250
+INFO:root:Epoch[46] Batch [80]	Speed: 226.12 samples/sec	accuracy=0.767500	top_k_accuracy_5=0.971875
+INFO:root:Epoch[46] Batch [100]	Speed: 224.66 samples/sec	accuracy=0.765000	top_k_accuracy_5=0.963750
+INFO:root:Epoch[46] Batch [120]	Speed: 226.18 samples/sec	accuracy=0.746875	top_k_accuracy_5=0.958750
+INFO:root:Epoch[46] Train-accuracy=nan
+INFO:root:Epoch[46] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[46] Time cost=43.237
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0047.params"
+INFO:root:Epoch[46] Validation-accuracy=0.333929
+INFO:root:Epoch[46] Validation-top_k_accuracy_5=0.619643
+INFO:root:Epoch[47] Batch [20]	Speed: 227.03 samples/sec	accuracy=0.768452	top_k_accuracy_5=0.966071
+INFO:root:Epoch[47] Batch [40]	Speed: 222.71 samples/sec	accuracy=0.772500	top_k_accuracy_5=0.968750
+INFO:root:Epoch[47] Batch [60]	Speed: 223.67 samples/sec	accuracy=0.773750	top_k_accuracy_5=0.965000
+INFO:root:Epoch[47] Batch [80]	Speed: 223.75 samples/sec	accuracy=0.776250	top_k_accuracy_5=0.967500
+INFO:root:Epoch[47] Batch [100]	Speed: 225.43 samples/sec	accuracy=0.805000	top_k_accuracy_5=0.971250
+INFO:root:Epoch[47] Batch [120]	Speed: 225.87 samples/sec	accuracy=0.791875	top_k_accuracy_5=0.978125
+INFO:root:Epoch[47] Train-accuracy=nan
+INFO:root:Epoch[47] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[47] Time cost=43.301
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0048.params"
+INFO:root:Epoch[47] Validation-accuracy=0.372917
+INFO:root:Epoch[47] Validation-top_k_accuracy_5=0.714583
+INFO:root:Epoch[48] Batch [20]	Speed: 227.94 samples/sec	accuracy=0.785714	top_k_accuracy_5=0.967262
+INFO:root:Epoch[48] Batch [40]	Speed: 223.02 samples/sec	accuracy=0.786250	top_k_accuracy_5=0.971250
+INFO:root:Epoch[48] Batch [60]	Speed: 224.05 samples/sec	accuracy=0.773750	top_k_accuracy_5=0.973125
+INFO:root:Epoch[48] Batch [80]	Speed: 223.56 samples/sec	accuracy=0.806250	top_k_accuracy_5=0.972500
+INFO:root:Epoch[48] Batch [100]	Speed: 224.42 samples/sec	accuracy=0.797500	top_k_accuracy_5=0.976875
+INFO:root:Epoch[48] Batch [120]	Speed: 226.19 samples/sec	accuracy=0.781250	top_k_accuracy_5=0.970000
+INFO:root:Epoch[48] Train-accuracy=0.862500
+INFO:root:Epoch[48] Train-top_k_accuracy_5=0.987500
+INFO:root:Epoch[48] Time cost=43.919
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0049.params"
+INFO:root:Epoch[48] Validation-accuracy=0.400000
+INFO:root:Epoch[48] Validation-top_k_accuracy_5=0.731250
+INFO:root:Epoch[49] Batch [20]	Speed: 225.76 samples/sec	accuracy=0.793452	top_k_accuracy_5=0.975000
+INFO:root:Epoch[49] Batch [40]	Speed: 224.04 samples/sec	accuracy=0.792500	top_k_accuracy_5=0.973125
+INFO:root:Epoch[49] Batch [60]	Speed: 222.41 samples/sec	accuracy=0.782500	top_k_accuracy_5=0.970000
+INFO:root:Epoch[49] Batch [80]	Speed: 222.39 samples/sec	accuracy=0.819375	top_k_accuracy_5=0.972500
+INFO:root:Epoch[49] Batch [100]	Speed: 225.65 samples/sec	accuracy=0.816250	top_k_accuracy_5=0.974375
+INFO:root:Epoch[49] Batch [120]	Speed: 225.42 samples/sec	accuracy=0.800000	top_k_accuracy_5=0.970625
+INFO:root:Epoch[49] Train-accuracy=nan
+INFO:root:Epoch[49] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[49] Time cost=43.420
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0050.params"
+INFO:root:Epoch[49] Validation-accuracy=0.316071
+INFO:root:Epoch[49] Validation-top_k_accuracy_5=0.628571
+INFO:root:Epoch[50] Batch [20]	Speed: 228.35 samples/sec	accuracy=0.826786	top_k_accuracy_5=0.975000
+INFO:root:Epoch[50] Batch [40]	Speed: 224.13 samples/sec	accuracy=0.811250	top_k_accuracy_5=0.975000
+INFO:root:Epoch[50] Batch [60]	Speed: 221.88 samples/sec	accuracy=0.815625	top_k_accuracy_5=0.976875
+INFO:root:Epoch[50] Batch [80]	Speed: 224.36 samples/sec	accuracy=0.813750	top_k_accuracy_5=0.979375
+INFO:root:Epoch[50] Batch [100]	Speed: 224.84 samples/sec	accuracy=0.810000	top_k_accuracy_5=0.971250
+INFO:root:Epoch[50] Batch [120]	Speed: 226.14 samples/sec	accuracy=0.820625	top_k_accuracy_5=0.979375
+INFO:root:Epoch[50] Train-accuracy=0.800000
+INFO:root:Epoch[50] Train-top_k_accuracy_5=0.962500
+INFO:root:Epoch[50] Time cost=43.630
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0051.params"
+INFO:root:Epoch[50] Validation-accuracy=0.408333
+INFO:root:Epoch[50] Validation-top_k_accuracy_5=0.729167
+INFO:root:Epoch[51] Batch [20]	Speed: 228.30 samples/sec	accuracy=0.805357	top_k_accuracy_5=0.975000
+INFO:root:Epoch[51] Batch [40]	Speed: 222.41 samples/sec	accuracy=0.830625	top_k_accuracy_5=0.976875
+INFO:root:Epoch[51] Batch [60]	Speed: 222.99 samples/sec	accuracy=0.811250	top_k_accuracy_5=0.977500
+INFO:root:Epoch[51] Batch [80]	Speed: 223.47 samples/sec	accuracy=0.817500	top_k_accuracy_5=0.980625
+INFO:root:Epoch[51] Batch [100]	Speed: 221.91 samples/sec	accuracy=0.832500	top_k_accuracy_5=0.980625
+INFO:root:Epoch[51] Batch [120]	Speed: 225.49 samples/sec	accuracy=0.830000	top_k_accuracy_5=0.985625
+INFO:root:Epoch[51] Train-accuracy=nan
+INFO:root:Epoch[51] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[51] Time cost=43.411
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0052.params"
+INFO:root:Epoch[51] Validation-accuracy=0.389286
+INFO:root:Epoch[51] Validation-top_k_accuracy_5=0.728571
+INFO:root:Epoch[52] Batch [20]	Speed: 229.87 samples/sec	accuracy=0.841071	top_k_accuracy_5=0.980357
+INFO:root:Epoch[52] Batch [40]	Speed: 221.24 samples/sec	accuracy=0.832500	top_k_accuracy_5=0.981250
+INFO:root:Epoch[52] Batch [60]	Speed: 222.25 samples/sec	accuracy=0.839375	top_k_accuracy_5=0.988125
+INFO:root:Epoch[52] Batch [80]	Speed: 223.18 samples/sec	accuracy=0.839375	top_k_accuracy_5=0.981875
+INFO:root:Epoch[52] Batch [100]	Speed: 223.06 samples/sec	accuracy=0.860625	top_k_accuracy_5=0.985625
+INFO:root:Epoch[52] Batch [120]	Speed: 220.75 samples/sec	accuracy=0.852500	top_k_accuracy_5=0.984375
+INFO:root:Epoch[52] Train-accuracy=nan
+INFO:root:Epoch[52] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[52] Time cost=43.585
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0053.params"
+INFO:root:Epoch[52] Validation-accuracy=0.385417
+INFO:root:Epoch[52] Validation-top_k_accuracy_5=0.710417
+INFO:root:Epoch[53] Batch [20]	Speed: 227.17 samples/sec	accuracy=0.838690	top_k_accuracy_5=0.979762
+INFO:root:Epoch[53] Batch [40]	Speed: 222.81 samples/sec	accuracy=0.832500	top_k_accuracy_5=0.974375
+INFO:root:Epoch[53] Batch [60]	Speed: 222.49 samples/sec	accuracy=0.841250	top_k_accuracy_5=0.981875
+INFO:root:Epoch[53] Batch [80]	Speed: 222.94 samples/sec	accuracy=0.851250	top_k_accuracy_5=0.986250
+INFO:root:Epoch[53] Batch [100]	Speed: 220.69 samples/sec	accuracy=0.858125	top_k_accuracy_5=0.986250
+INFO:root:Epoch[53] Batch [120]	Speed: 203.68 samples/sec	accuracy=0.857500	top_k_accuracy_5=0.985625
+INFO:root:Epoch[53] Train-accuracy=0.962500
+INFO:root:Epoch[53] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[53] Time cost=44.645
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0054.params"
+INFO:root:Epoch[53] Validation-accuracy=0.395833
+INFO:root:Epoch[53] Validation-top_k_accuracy_5=0.679167
+INFO:root:Epoch[54] Batch [20]	Speed: 227.50 samples/sec	accuracy=0.858929	top_k_accuracy_5=0.985714
+INFO:root:Epoch[54] Batch [40]	Speed: 222.72 samples/sec	accuracy=0.854375	top_k_accuracy_5=0.981250
+INFO:root:Epoch[54] Batch [60]	Speed: 224.66 samples/sec	accuracy=0.828125	top_k_accuracy_5=0.976875
+INFO:root:Epoch[54] Batch [80]	Speed: 222.27 samples/sec	accuracy=0.863750	top_k_accuracy_5=0.982500
+INFO:root:Epoch[54] Batch [100]	Speed: 223.18 samples/sec	accuracy=0.871875	top_k_accuracy_5=0.992500
+INFO:root:Epoch[54] Batch [120]	Speed: 218.69 samples/sec	accuracy=0.848750	top_k_accuracy_5=0.983125
+INFO:root:Epoch[54] Train-accuracy=nan
+INFO:root:Epoch[54] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[54] Time cost=43.618
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0055.params"
+INFO:root:Epoch[54] Validation-accuracy=0.426786
+INFO:root:Epoch[54] Validation-top_k_accuracy_5=0.739286
+INFO:root:Epoch[55] Batch [20]	Speed: 228.48 samples/sec	accuracy=0.851786	top_k_accuracy_5=0.982738
+INFO:root:Epoch[55] Batch [40]	Speed: 221.96 samples/sec	accuracy=0.854375	top_k_accuracy_5=0.982500
+INFO:root:Epoch[55] Batch [60]	Speed: 223.35 samples/sec	accuracy=0.850000	top_k_accuracy_5=0.981250
+INFO:root:Epoch[55] Batch [80]	Speed: 220.97 samples/sec	accuracy=0.863750	top_k_accuracy_5=0.985000
+INFO:root:Epoch[55] Batch [100]	Speed: 221.87 samples/sec	accuracy=0.851875	top_k_accuracy_5=0.990625
+INFO:root:Epoch[55] Batch [120]	Speed: 219.49 samples/sec	accuracy=0.854375	top_k_accuracy_5=0.982500
+INFO:root:Epoch[55] Train-accuracy=nan
+INFO:root:Epoch[55] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[55] Time cost=43.716
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0056.params"
+INFO:root:Epoch[55] Validation-accuracy=0.372917
+INFO:root:Epoch[55] Validation-top_k_accuracy_5=0.670833
+INFO:root:Epoch[56] Batch [20]	Speed: 226.30 samples/sec	accuracy=0.860119	top_k_accuracy_5=0.990476
+INFO:root:Epoch[56] Batch [40]	Speed: 222.46 samples/sec	accuracy=0.870000	top_k_accuracy_5=0.988125
+INFO:root:Epoch[56] Batch [60]	Speed: 220.24 samples/sec	accuracy=0.859375	top_k_accuracy_5=0.986875
+INFO:root:Epoch[56] Batch [80]	Speed: 221.21 samples/sec	accuracy=0.871875	top_k_accuracy_5=0.985000
+INFO:root:Epoch[56] Batch [100]	Speed: 221.18 samples/sec	accuracy=0.885000	top_k_accuracy_5=0.987500
+INFO:root:Epoch[56] Batch [120]	Speed: 222.70 samples/sec	accuracy=0.890625	top_k_accuracy_5=0.989375
+INFO:root:Epoch[56] Train-accuracy=0.900000
+INFO:root:Epoch[56] Train-top_k_accuracy_5=0.975000
+INFO:root:Epoch[56] Time cost=44.643
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0057.params"
+INFO:root:Epoch[56] Validation-accuracy=0.421429
+INFO:root:Epoch[56] Validation-top_k_accuracy_5=0.714286
+INFO:root:Epoch[57] Batch [20]	Speed: 226.54 samples/sec	accuracy=0.885714	top_k_accuracy_5=0.989286
+INFO:root:Epoch[57] Batch [40]	Speed: 212.04 samples/sec	accuracy=0.878750	top_k_accuracy_5=0.995000
+INFO:root:Epoch[57] Batch [60]	Speed: 221.00 samples/sec	accuracy=0.881250	top_k_accuracy_5=0.991250
+INFO:root:Epoch[57] Batch [80]	Speed: 223.06 samples/sec	accuracy=0.875000	top_k_accuracy_5=0.990000
+INFO:root:Epoch[57] Batch [100]	Speed: 219.34 samples/sec	accuracy=0.884375	top_k_accuracy_5=0.986250
+INFO:root:Epoch[57] Batch [120]	Speed: 220.71 samples/sec	accuracy=0.882500	top_k_accuracy_5=0.992500
+INFO:root:Epoch[57] Train-accuracy=nan
+INFO:root:Epoch[57] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[57] Time cost=44.163
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0058.params"
+INFO:root:Epoch[57] Validation-accuracy=0.358333
+INFO:root:Epoch[57] Validation-top_k_accuracy_5=0.683333
+INFO:root:Epoch[58] Batch [20]	Speed: 229.67 samples/sec	accuracy=0.882143	top_k_accuracy_5=0.995833
+INFO:root:Epoch[58] Batch [40]	Speed: 223.89 samples/sec	accuracy=0.884375	top_k_accuracy_5=0.985625
+INFO:root:Epoch[58] Batch [60]	Speed: 225.03 samples/sec	accuracy=0.886875	top_k_accuracy_5=0.988750
+INFO:root:Epoch[58] Batch [80]	Speed: 224.42 samples/sec	accuracy=0.896250	top_k_accuracy_5=0.994375
+INFO:root:Epoch[58] Batch [100]	Speed: 223.05 samples/sec	accuracy=0.901250	top_k_accuracy_5=0.993125
+INFO:root:Epoch[58] Batch [120]	Speed: 221.28 samples/sec	accuracy=0.900000	top_k_accuracy_5=0.996250
+INFO:root:Epoch[58] Train-accuracy=0.862500
+INFO:root:Epoch[58] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[58] Time cost=43.712
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0059.params"
+INFO:root:Epoch[58] Validation-accuracy=0.372917
+INFO:root:Epoch[58] Validation-top_k_accuracy_5=0.677083
+INFO:root:Epoch[59] Batch [20]	Speed: 227.81 samples/sec	accuracy=0.892262	top_k_accuracy_5=0.989881
+INFO:root:Epoch[59] Batch [40]	Speed: 220.47 samples/sec	accuracy=0.894375	top_k_accuracy_5=0.990625
+INFO:root:Epoch[59] Batch [60]	Speed: 217.15 samples/sec	accuracy=0.903750	top_k_accuracy_5=0.995000
+INFO:root:Epoch[59] Batch [80]	Speed: 216.11 samples/sec	accuracy=0.903750	top_k_accuracy_5=0.995625
+INFO:root:Epoch[59] Batch [100]	Speed: 217.25 samples/sec	accuracy=0.910625	top_k_accuracy_5=0.995625
+INFO:root:Epoch[59] Batch [120]	Speed: 217.51 samples/sec	accuracy=0.898125	top_k_accuracy_5=0.991875
+INFO:root:Epoch[59] Train-accuracy=nan
+INFO:root:Epoch[59] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[59] Time cost=44.363
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0060.params"
+INFO:root:Epoch[59] Validation-accuracy=0.387500
+INFO:root:Epoch[59] Validation-top_k_accuracy_5=0.694643
+INFO:root:Epoch[60] Batch [20]	Speed: 227.94 samples/sec	accuracy=0.891667	top_k_accuracy_5=0.987500
+INFO:root:Epoch[60] Batch [40]	Speed: 224.71 samples/sec	accuracy=0.898750	top_k_accuracy_5=0.995625
+INFO:root:Epoch[60] Batch [60]	Speed: 221.93 samples/sec	accuracy=0.910625	top_k_accuracy_5=0.993125
+INFO:root:Epoch[60] Batch [80]	Speed: 223.68 samples/sec	accuracy=0.908125	top_k_accuracy_5=0.994375
+INFO:root:Epoch[60] Batch [100]	Speed: 223.36 samples/sec	accuracy=0.910625	top_k_accuracy_5=0.991875
+INFO:root:Epoch[60] Batch [120]	Speed: 218.61 samples/sec	accuracy=0.912500	top_k_accuracy_5=0.996875
+INFO:root:Epoch[60] Train-accuracy=nan
+INFO:root:Epoch[60] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[60] Time cost=43.564
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0061.params"
+INFO:root:Epoch[60] Validation-accuracy=0.331250
+INFO:root:Epoch[60] Validation-top_k_accuracy_5=0.612500
+INFO:root:Epoch[61] Batch [20]	Speed: 228.22 samples/sec	accuracy=0.907738	top_k_accuracy_5=0.991667
+INFO:root:Epoch[61] Batch [40]	Speed: 220.86 samples/sec	accuracy=0.916875	top_k_accuracy_5=0.995000
+INFO:root:Epoch[61] Batch [60]	Speed: 220.91 samples/sec	accuracy=0.912500	top_k_accuracy_5=0.995000
+INFO:root:Epoch[61] Batch [80]	Speed: 218.68 samples/sec	accuracy=0.906875	top_k_accuracy_5=0.993750
+INFO:root:Epoch[61] Batch [100]	Speed: 220.50 samples/sec	accuracy=0.915625	top_k_accuracy_5=0.995625
+INFO:root:Epoch[61] Batch [120]	Speed: 221.89 samples/sec	accuracy=0.910625	top_k_accuracy_5=0.993750
+INFO:root:Epoch[61] Train-accuracy=0.887500
+INFO:root:Epoch[61] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[61] Time cost=44.222
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0062.params"
+INFO:root:Epoch[61] Validation-accuracy=0.383929
+INFO:root:Epoch[61] Validation-top_k_accuracy_5=0.691071
+INFO:root:Epoch[62] Batch [20]	Speed: 228.28 samples/sec	accuracy=0.916667	top_k_accuracy_5=0.997024
+INFO:root:Epoch[62] Batch [40]	Speed: 191.73 samples/sec	accuracy=0.907500	top_k_accuracy_5=0.993750
+INFO:root:Epoch[62] Batch [60]	Speed: 221.69 samples/sec	accuracy=0.910625	top_k_accuracy_5=0.996250
+INFO:root:Epoch[62] Batch [80]	Speed: 222.83 samples/sec	accuracy=0.916875	top_k_accuracy_5=0.993750
+INFO:root:Epoch[62] Batch [100]	Speed: 220.16 samples/sec	accuracy=0.925000	top_k_accuracy_5=0.993125
+INFO:root:Epoch[62] Batch [120]	Speed: 222.90 samples/sec	accuracy=0.926250	top_k_accuracy_5=0.995000
+INFO:root:Epoch[62] Train-accuracy=nan
+INFO:root:Epoch[62] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[62] Time cost=44.806
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0063.params"
+INFO:root:Epoch[62] Validation-accuracy=0.395833
+INFO:root:Epoch[62] Validation-top_k_accuracy_5=0.664583
+INFO:root:Epoch[63] Batch [20]	Speed: 218.33 samples/sec	accuracy=0.920238	top_k_accuracy_5=0.995238
+INFO:root:Epoch[63] Batch [40]	Speed: 215.54 samples/sec	accuracy=0.938750	top_k_accuracy_5=0.998125
+INFO:root:Epoch[63] Batch [60]	Speed: 221.02 samples/sec	accuracy=0.920625	top_k_accuracy_5=0.994375
+INFO:root:Epoch[63] Batch [80]	Speed: 220.55 samples/sec	accuracy=0.915625	top_k_accuracy_5=0.993750
+INFO:root:Epoch[63] Batch [100]	Speed: 219.21 samples/sec	accuracy=0.928125	top_k_accuracy_5=0.994375
+INFO:root:Epoch[63] Batch [120]	Speed: 221.22 samples/sec	accuracy=0.930625	top_k_accuracy_5=0.994375
+INFO:root:Epoch[63] Train-accuracy=nan
+INFO:root:Epoch[63] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[63] Time cost=44.377
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0064.params"
+INFO:root:Epoch[63] Validation-accuracy=0.435417
+INFO:root:Epoch[63] Validation-top_k_accuracy_5=0.722917
+INFO:root:Epoch[64] Batch [20]	Speed: 228.16 samples/sec	accuracy=0.929167	top_k_accuracy_5=0.994643
+INFO:root:Epoch[64] Batch [40]	Speed: 222.90 samples/sec	accuracy=0.937500	top_k_accuracy_5=0.996250
+INFO:root:Epoch[64] Batch [60]	Speed: 221.74 samples/sec	accuracy=0.924375	top_k_accuracy_5=0.997500
+INFO:root:Epoch[64] Batch [80]	Speed: 222.42 samples/sec	accuracy=0.936875	top_k_accuracy_5=0.994375
+INFO:root:Epoch[64] Batch [100]	Speed: 220.64 samples/sec	accuracy=0.943125	top_k_accuracy_5=0.996875
+INFO:root:Epoch[64] Batch [120]	Speed: 223.31 samples/sec	accuracy=0.936250	top_k_accuracy_5=0.998125
+INFO:root:Epoch[64] Train-accuracy=0.887500
+INFO:root:Epoch[64] Train-top_k_accuracy_5=0.975000
+INFO:root:Epoch[64] Time cost=44.247
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0065.params"
+INFO:root:Epoch[64] Validation-accuracy=0.441071
+INFO:root:Epoch[64] Validation-top_k_accuracy_5=0.726786
+INFO:root:Epoch[65] Batch [20]	Speed: 227.03 samples/sec	accuracy=0.925000	top_k_accuracy_5=0.997024
+INFO:root:Epoch[65] Batch [40]	Speed: 221.68 samples/sec	accuracy=0.928750	top_k_accuracy_5=0.994375
+INFO:root:Epoch[65] Batch [60]	Speed: 221.78 samples/sec	accuracy=0.920625	top_k_accuracy_5=0.995000
+INFO:root:Epoch[65] Batch [80]	Speed: 222.98 samples/sec	accuracy=0.940625	top_k_accuracy_5=0.997500
+INFO:root:Epoch[65] Batch [100]	Speed: 219.84 samples/sec	accuracy=0.934375	top_k_accuracy_5=0.997500
+INFO:root:Epoch[65] Batch [120]	Speed: 225.26 samples/sec	accuracy=0.940625	top_k_accuracy_5=0.996875
+INFO:root:Epoch[65] Train-accuracy=nan
+INFO:root:Epoch[65] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[65] Time cost=43.631
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0066.params"
+INFO:root:Epoch[65] Validation-accuracy=0.412500
+INFO:root:Epoch[65] Validation-top_k_accuracy_5=0.708333
+INFO:root:Epoch[66] Batch [20]	Speed: 227.93 samples/sec	accuracy=0.943452	top_k_accuracy_5=0.997024
+INFO:root:Epoch[66] Batch [40]	Speed: 223.59 samples/sec	accuracy=0.943125	top_k_accuracy_5=0.997500
+INFO:root:Epoch[66] Batch [60]	Speed: 221.75 samples/sec	accuracy=0.928750	top_k_accuracy_5=0.996250
+INFO:root:Epoch[66] Batch [80]	Speed: 223.58 samples/sec	accuracy=0.937500	top_k_accuracy_5=0.998125
+INFO:root:Epoch[66] Batch [100]	Speed: 224.06 samples/sec	accuracy=0.935625	top_k_accuracy_5=0.997500
+INFO:root:Epoch[66] Batch [120]	Speed: 225.63 samples/sec	accuracy=0.938750	top_k_accuracy_5=0.995625
+INFO:root:Epoch[66] Train-accuracy=0.962500
+INFO:root:Epoch[66] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[66] Time cost=43.727
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0067.params"
+INFO:root:Epoch[66] Validation-accuracy=0.426786
+INFO:root:Epoch[66] Validation-top_k_accuracy_5=0.746429
+INFO:root:Epoch[67] Batch [20]	Speed: 227.15 samples/sec	accuracy=0.933929	top_k_accuracy_5=0.998810
+INFO:root:Epoch[67] Batch [40]	Speed: 222.39 samples/sec	accuracy=0.943750	top_k_accuracy_5=0.996250
+INFO:root:Epoch[67] Batch [60]	Speed: 223.58 samples/sec	accuracy=0.929375	top_k_accuracy_5=0.995625
+INFO:root:Epoch[67] Batch [80]	Speed: 223.52 samples/sec	accuracy=0.940000	top_k_accuracy_5=0.995000
+INFO:root:Epoch[67] Batch [100]	Speed: 223.18 samples/sec	accuracy=0.938125	top_k_accuracy_5=0.996875
+INFO:root:Epoch[67] Batch [120]	Speed: 225.02 samples/sec	accuracy=0.948750	top_k_accuracy_5=0.995000
+INFO:root:Epoch[67] Train-accuracy=nan
+INFO:root:Epoch[67] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[67] Time cost=43.427
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0068.params"
+INFO:root:Epoch[67] Validation-accuracy=0.468750
+INFO:root:Epoch[67] Validation-top_k_accuracy_5=0.750000
+INFO:root:Epoch[68] Batch [20]	Speed: 227.72 samples/sec	accuracy=0.946429	top_k_accuracy_5=0.997024
+INFO:root:Epoch[68] Batch [40]	Speed: 223.21 samples/sec	accuracy=0.946250	top_k_accuracy_5=0.996250
+INFO:root:Epoch[68] Batch [60]	Speed: 224.98 samples/sec	accuracy=0.942500	top_k_accuracy_5=0.999375
+INFO:root:Epoch[68] Batch [80]	Speed: 222.98 samples/sec	accuracy=0.952500	top_k_accuracy_5=0.996875
+INFO:root:Epoch[68] Batch [100]	Speed: 224.34 samples/sec	accuracy=0.950000	top_k_accuracy_5=0.996875
+INFO:root:Epoch[68] Batch [120]	Speed: 226.19 samples/sec	accuracy=0.947500	top_k_accuracy_5=0.998125
+INFO:root:Epoch[68] Train-accuracy=nan
+INFO:root:Epoch[68] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[68] Time cost=43.264
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0069.params"
+INFO:root:Epoch[68] Validation-accuracy=0.389583
+INFO:root:Epoch[68] Validation-top_k_accuracy_5=0.714583
+INFO:root:Epoch[69] Batch [20]	Speed: 229.97 samples/sec	accuracy=0.959524	top_k_accuracy_5=0.997619
+INFO:root:Epoch[69] Batch [40]	Speed: 223.57 samples/sec	accuracy=0.953750	top_k_accuracy_5=0.998750
+INFO:root:Epoch[69] Batch [60]	Speed: 223.95 samples/sec	accuracy=0.948750	top_k_accuracy_5=0.998125
+INFO:root:Epoch[69] Batch [80]	Speed: 224.66 samples/sec	accuracy=0.958750	top_k_accuracy_5=0.995625
+INFO:root:Epoch[69] Batch [100]	Speed: 224.52 samples/sec	accuracy=0.950000	top_k_accuracy_5=0.998750
+INFO:root:Epoch[69] Batch [120]	Speed: 226.00 samples/sec	accuracy=0.949375	top_k_accuracy_5=0.998125
+INFO:root:Epoch[69] Train-accuracy=0.975000
+INFO:root:Epoch[69] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[69] Time cost=43.544
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0070.params"
+INFO:root:Epoch[69] Validation-accuracy=0.471429
+INFO:root:Epoch[69] Validation-top_k_accuracy_5=0.753571
+INFO:root:Epoch[70] Batch [20]	Speed: 229.71 samples/sec	accuracy=0.937500	top_k_accuracy_5=0.995833
+INFO:root:Epoch[70] Batch [40]	Speed: 221.97 samples/sec	accuracy=0.958125	top_k_accuracy_5=0.996250
+INFO:root:Epoch[70] Batch [60]	Speed: 222.66 samples/sec	accuracy=0.955000	top_k_accuracy_5=0.997500
+INFO:root:Epoch[70] Batch [80]	Speed: 223.39 samples/sec	accuracy=0.956250	top_k_accuracy_5=0.997500
+INFO:root:Epoch[70] Batch [100]	Speed: 224.59 samples/sec	accuracy=0.960000	top_k_accuracy_5=0.997500
+INFO:root:Epoch[70] Batch [120]	Speed: 226.38 samples/sec	accuracy=0.951250	top_k_accuracy_5=0.995625
+INFO:root:Epoch[70] Train-accuracy=nan
+INFO:root:Epoch[70] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[70] Time cost=43.325
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0071.params"
+INFO:root:Epoch[70] Validation-accuracy=0.425000
+INFO:root:Epoch[70] Validation-top_k_accuracy_5=0.735417
+INFO:root:Epoch[71] Batch [20]	Speed: 227.14 samples/sec	accuracy=0.955357	top_k_accuracy_5=0.998214
+INFO:root:Epoch[71] Batch [40]	Speed: 223.43 samples/sec	accuracy=0.955625	top_k_accuracy_5=0.999375
+INFO:root:Epoch[71] Batch [60]	Speed: 225.24 samples/sec	accuracy=0.955625	top_k_accuracy_5=0.998125
+INFO:root:Epoch[71] Batch [80]	Speed: 223.64 samples/sec	accuracy=0.955625	top_k_accuracy_5=0.999375
+INFO:root:Epoch[71] Batch [100]	Speed: 224.77 samples/sec	accuracy=0.962500	top_k_accuracy_5=0.998125
+INFO:root:Epoch[71] Batch [120]	Speed: 224.57 samples/sec	accuracy=0.943750	top_k_accuracy_5=0.998750
+INFO:root:Epoch[71] Train-accuracy=nan
+INFO:root:Epoch[71] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[71] Time cost=43.298
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0072.params"
+INFO:root:Epoch[71] Validation-accuracy=0.425000
+INFO:root:Epoch[71] Validation-top_k_accuracy_5=0.719643
+INFO:root:Epoch[72] Batch [20]	Speed: 229.36 samples/sec	accuracy=0.958929	top_k_accuracy_5=0.997619
+INFO:root:Epoch[72] Batch [40]	Speed: 224.67 samples/sec	accuracy=0.950625	top_k_accuracy_5=0.996875
+INFO:root:Epoch[72] Batch [60]	Speed: 223.68 samples/sec	accuracy=0.953750	top_k_accuracy_5=0.998125
+INFO:root:Epoch[72] Batch [80]	Speed: 223.34 samples/sec	accuracy=0.964375	top_k_accuracy_5=0.998750
+INFO:root:Epoch[72] Batch [100]	Speed: 223.47 samples/sec	accuracy=0.960000	top_k_accuracy_5=0.999375
+INFO:root:Epoch[72] Batch [120]	Speed: 219.23 samples/sec	accuracy=0.950625	top_k_accuracy_5=0.996875
+INFO:root:Epoch[72] Train-accuracy=0.937500
+INFO:root:Epoch[72] Train-top_k_accuracy_5=0.987500
+INFO:root:Epoch[72] Time cost=44.112
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0073.params"
+INFO:root:Epoch[72] Validation-accuracy=0.397917
+INFO:root:Epoch[72] Validation-top_k_accuracy_5=0.716667
+INFO:root:Epoch[73] Batch [20]	Speed: 225.68 samples/sec	accuracy=0.953571	top_k_accuracy_5=0.998214
+INFO:root:Epoch[73] Batch [40]	Speed: 222.99 samples/sec	accuracy=0.959375	top_k_accuracy_5=0.996875
+INFO:root:Epoch[73] Batch [60]	Speed: 221.76 samples/sec	accuracy=0.952500	top_k_accuracy_5=0.997500
+INFO:root:Epoch[73] Batch [80]	Speed: 223.64 samples/sec	accuracy=0.955625	top_k_accuracy_5=0.999375
+INFO:root:Epoch[73] Batch [100]	Speed: 224.04 samples/sec	accuracy=0.964375	top_k_accuracy_5=0.996875
+INFO:root:Epoch[73] Batch [120]	Speed: 225.44 samples/sec	accuracy=0.953750	top_k_accuracy_5=0.996875
+INFO:root:Epoch[73] Train-accuracy=nan
+INFO:root:Epoch[73] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[73] Time cost=43.460
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0074.params"
+INFO:root:Epoch[73] Validation-accuracy=0.447917
+INFO:root:Epoch[73] Validation-top_k_accuracy_5=0.737500
+INFO:root:Epoch[74] Batch [20]	Speed: 227.77 samples/sec	accuracy=0.959524	top_k_accuracy_5=0.998214
+INFO:root:Epoch[74] Batch [40]	Speed: 222.68 samples/sec	accuracy=0.966875	top_k_accuracy_5=0.998125
+INFO:root:Epoch[74] Batch [60]	Speed: 222.74 samples/sec	accuracy=0.956875	top_k_accuracy_5=0.998125
+INFO:root:Epoch[74] Batch [80]	Speed: 223.49 samples/sec	accuracy=0.971875	top_k_accuracy_5=0.998750
+INFO:root:Epoch[74] Batch [100]	Speed: 223.79 samples/sec	accuracy=0.966250	top_k_accuracy_5=0.998125
+INFO:root:Epoch[74] Batch [120]	Speed: 226.07 samples/sec	accuracy=0.968125	top_k_accuracy_5=0.998125
+INFO:root:Epoch[74] Train-accuracy=0.962500
+INFO:root:Epoch[74] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[74] Time cost=43.728
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0075.params"
+INFO:root:Epoch[74] Validation-accuracy=0.369643
+INFO:root:Epoch[74] Validation-top_k_accuracy_5=0.723214
+INFO:root:Epoch[75] Batch [20]	Speed: 227.63 samples/sec	accuracy=0.963690	top_k_accuracy_5=0.996429
+INFO:root:Epoch[75] Batch [40]	Speed: 224.63 samples/sec	accuracy=0.961875	top_k_accuracy_5=0.996250
+INFO:root:Epoch[75] Batch [60]	Speed: 224.62 samples/sec	accuracy=0.962500	top_k_accuracy_5=0.999375
+INFO:root:Epoch[75] Batch [80]	Speed: 222.77 samples/sec	accuracy=0.967500	top_k_accuracy_5=0.999375
+INFO:root:Epoch[75] Batch [100]	Speed: 223.51 samples/sec	accuracy=0.958125	top_k_accuracy_5=0.998750
+INFO:root:Epoch[75] Batch [120]	Speed: 225.76 samples/sec	accuracy=0.959375	top_k_accuracy_5=0.998750
+INFO:root:Epoch[75] Train-accuracy=nan
+INFO:root:Epoch[75] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[75] Time cost=43.300
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0076.params"
+INFO:root:Epoch[75] Validation-accuracy=0.404167
+INFO:root:Epoch[75] Validation-top_k_accuracy_5=0.712500
+INFO:root:Epoch[76] Batch [20]	Speed: 229.22 samples/sec	accuracy=0.964881	top_k_accuracy_5=0.998214
+INFO:root:Epoch[76] Batch [40]	Speed: 224.19 samples/sec	accuracy=0.961875	top_k_accuracy_5=0.998125
+INFO:root:Epoch[76] Batch [60]	Speed: 222.22 samples/sec	accuracy=0.968125	top_k_accuracy_5=0.998125
+INFO:root:Epoch[76] Batch [80]	Speed: 224.13 samples/sec	accuracy=0.968750	top_k_accuracy_5=0.997500
+INFO:root:Epoch[76] Batch [100]	Speed: 222.94 samples/sec	accuracy=0.968750	top_k_accuracy_5=0.999375
+INFO:root:Epoch[76] Batch [120]	Speed: 219.27 samples/sec	accuracy=0.958125	top_k_accuracy_5=0.998750
+INFO:root:Epoch[76] Train-accuracy=nan
+INFO:root:Epoch[76] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[76] Time cost=43.536
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0077.params"
+INFO:root:Epoch[76] Validation-accuracy=0.371429
+INFO:root:Epoch[76] Validation-top_k_accuracy_5=0.685714
+INFO:root:Epoch[77] Batch [20]	Speed: 229.77 samples/sec	accuracy=0.962500	top_k_accuracy_5=0.998810
+INFO:root:Epoch[77] Batch [40]	Speed: 223.37 samples/sec	accuracy=0.976250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[77] Batch [60]	Speed: 222.15 samples/sec	accuracy=0.970000	top_k_accuracy_5=0.998125
+INFO:root:Epoch[77] Batch [80]	Speed: 221.05 samples/sec	accuracy=0.972500	top_k_accuracy_5=0.998750
+INFO:root:Epoch[77] Batch [100]	Speed: 223.37 samples/sec	accuracy=0.973125	top_k_accuracy_5=0.998750
+INFO:root:Epoch[77] Batch [120]	Speed: 213.43 samples/sec	accuracy=0.963125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[77] Train-accuracy=0.962500
+INFO:root:Epoch[77] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[77] Time cost=44.171
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0078.params"
+INFO:root:Epoch[77] Validation-accuracy=0.425000
+INFO:root:Epoch[77] Validation-top_k_accuracy_5=0.718750
+INFO:root:Epoch[78] Batch [20]	Speed: 228.41 samples/sec	accuracy=0.972619	top_k_accuracy_5=0.998214
+INFO:root:Epoch[78] Batch [40]	Speed: 221.49 samples/sec	accuracy=0.960625	top_k_accuracy_5=0.997500
+INFO:root:Epoch[78] Batch [60]	Speed: 222.27 samples/sec	accuracy=0.965625	top_k_accuracy_5=0.999375
+INFO:root:Epoch[78] Batch [80]	Speed: 222.82 samples/sec	accuracy=0.968750	top_k_accuracy_5=0.998750
+INFO:root:Epoch[78] Batch [100]	Speed: 221.70 samples/sec	accuracy=0.971250	top_k_accuracy_5=0.999375
+INFO:root:Epoch[78] Batch [120]	Speed: 223.58 samples/sec	accuracy=0.976250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[78] Train-accuracy=nan
+INFO:root:Epoch[78] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[78] Time cost=43.572
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0079.params"
+INFO:root:Epoch[78] Validation-accuracy=0.435417
+INFO:root:Epoch[78] Validation-top_k_accuracy_5=0.745833
+INFO:root:Epoch[79] Batch [20]	Speed: 228.85 samples/sec	accuracy=0.960714	top_k_accuracy_5=0.998214
+INFO:root:Epoch[79] Batch [40]	Speed: 221.94 samples/sec	accuracy=0.963750	top_k_accuracy_5=0.998750
+INFO:root:Epoch[79] Batch [60]	Speed: 192.33 samples/sec	accuracy=0.970000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[79] Batch [80]	Speed: 222.76 samples/sec	accuracy=0.977500	top_k_accuracy_5=0.998750
+INFO:root:Epoch[79] Batch [100]	Speed: 222.08 samples/sec	accuracy=0.974375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[79] Batch [120]	Speed: 223.89 samples/sec	accuracy=0.976875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[79] Train-accuracy=nan
+INFO:root:Epoch[79] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[79] Time cost=44.651
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0080.params"
+INFO:root:Epoch[79] Validation-accuracy=0.442857
+INFO:root:Epoch[79] Validation-top_k_accuracy_5=0.748214
+INFO:root:Epoch[80] Batch [20]	Speed: 226.31 samples/sec	accuracy=0.978571	top_k_accuracy_5=0.999405
+INFO:root:Epoch[80] Batch [40]	Speed: 221.57 samples/sec	accuracy=0.976875	top_k_accuracy_5=0.998750
+INFO:root:Epoch[80] Batch [60]	Speed: 222.86 samples/sec	accuracy=0.972500	top_k_accuracy_5=0.999375
+INFO:root:Epoch[80] Batch [80]	Speed: 223.41 samples/sec	accuracy=0.968750	top_k_accuracy_5=0.998750
+INFO:root:Epoch[80] Batch [100]	Speed: 222.38 samples/sec	accuracy=0.977500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[80] Batch [120]	Speed: 215.47 samples/sec	accuracy=0.975000	top_k_accuracy_5=0.998125
+INFO:root:Epoch[80] Train-accuracy=1.000000
+INFO:root:Epoch[80] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[80] Time cost=44.479
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0081.params"
+INFO:root:Epoch[80] Validation-accuracy=0.489583
+INFO:root:Epoch[80] Validation-top_k_accuracy_5=0.768750
+INFO:root:Epoch[81] Batch [20]	Speed: 226.65 samples/sec	accuracy=0.976190	top_k_accuracy_5=0.999405
+INFO:root:Epoch[81] Batch [40]	Speed: 219.77 samples/sec	accuracy=0.973750	top_k_accuracy_5=0.998750
+INFO:root:Epoch[81] Batch [60]	Speed: 221.56 samples/sec	accuracy=0.980000	top_k_accuracy_5=0.999375
+INFO:root:Epoch[81] Batch [80]	Speed: 219.82 samples/sec	accuracy=0.977500	top_k_accuracy_5=0.999375
+INFO:root:Epoch[81] Batch [100]	Speed: 220.93 samples/sec	accuracy=0.980000	top_k_accuracy_5=0.999375
+INFO:root:Epoch[81] Batch [120]	Speed: 220.31 samples/sec	accuracy=0.975625	top_k_accuracy_5=0.998750
+INFO:root:Epoch[81] Train-accuracy=nan
+INFO:root:Epoch[81] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[81] Time cost=43.937
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0082.params"
+INFO:root:Epoch[81] Validation-accuracy=0.489286
+INFO:root:Epoch[81] Validation-top_k_accuracy_5=0.800000
+INFO:root:Epoch[82] Batch [20]	Speed: 227.21 samples/sec	accuracy=0.979762	top_k_accuracy_5=0.999405
+INFO:root:Epoch[82] Batch [40]	Speed: 219.57 samples/sec	accuracy=0.981875	top_k_accuracy_5=0.999375
+INFO:root:Epoch[82] Batch [60]	Speed: 216.60 samples/sec	accuracy=0.980000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[82] Batch [80]	Speed: 216.62 samples/sec	accuracy=0.977500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[82] Batch [100]	Speed: 221.03 samples/sec	accuracy=0.977500	top_k_accuracy_5=0.998125
+INFO:root:Epoch[82] Batch [120]	Speed: 217.08 samples/sec	accuracy=0.975625	top_k_accuracy_5=0.997500
+INFO:root:Epoch[82] Train-accuracy=0.975000
+INFO:root:Epoch[82] Train-top_k_accuracy_5=0.987500
+INFO:root:Epoch[82] Time cost=44.666
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0083.params"
+INFO:root:Epoch[82] Validation-accuracy=0.485417
+INFO:root:Epoch[82] Validation-top_k_accuracy_5=0.752083
+INFO:root:Epoch[83] Batch [20]	Speed: 228.83 samples/sec	accuracy=0.977976	top_k_accuracy_5=0.999405
+INFO:root:Epoch[83] Batch [40]	Speed: 220.76 samples/sec	accuracy=0.970000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[83] Batch [60]	Speed: 219.13 samples/sec	accuracy=0.975000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[83] Batch [80]	Speed: 219.67 samples/sec	accuracy=0.981250	top_k_accuracy_5=0.998750
+INFO:root:Epoch[83] Batch [100]	Speed: 220.82 samples/sec	accuracy=0.978125	top_k_accuracy_5=0.998125
+INFO:root:Epoch[83] Batch [120]	Speed: 221.05 samples/sec	accuracy=0.976250	top_k_accuracy_5=0.998750
+INFO:root:Epoch[83] Train-accuracy=nan
+INFO:root:Epoch[83] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[83] Time cost=43.903
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0084.params"
+INFO:root:Epoch[83] Validation-accuracy=0.441667
+INFO:root:Epoch[83] Validation-top_k_accuracy_5=0.745833
+INFO:root:Epoch[84] Batch [20]	Speed: 225.75 samples/sec	accuracy=0.983333	top_k_accuracy_5=0.999405
+INFO:root:Epoch[84] Batch [40]	Speed: 220.16 samples/sec	accuracy=0.983750	top_k_accuracy_5=0.998750
+INFO:root:Epoch[84] Batch [60]	Speed: 212.05 samples/sec	accuracy=0.986250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[84] Batch [80]	Speed: 222.17 samples/sec	accuracy=0.984375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[84] Batch [100]	Speed: 209.91 samples/sec	accuracy=0.983125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[84] Batch [120]	Speed: 223.41 samples/sec	accuracy=0.988750	top_k_accuracy_5=0.999375
+INFO:root:Epoch[84] Train-accuracy=nan
+INFO:root:Epoch[84] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[84] Time cost=44.489
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0085.params"
+INFO:root:Epoch[84] Validation-accuracy=0.458929
+INFO:root:Epoch[84] Validation-top_k_accuracy_5=0.775000
+INFO:root:Epoch[85] Batch [20]	Speed: 229.06 samples/sec	accuracy=0.981548	top_k_accuracy_5=0.998810
+INFO:root:Epoch[85] Batch [40]	Speed: 221.04 samples/sec	accuracy=0.975000	top_k_accuracy_5=0.999375
+INFO:root:Epoch[85] Batch [60]	Speed: 219.10 samples/sec	accuracy=0.979375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[85] Batch [80]	Speed: 220.39 samples/sec	accuracy=0.978750	top_k_accuracy_5=0.999375
+INFO:root:Epoch[85] Batch [100]	Speed: 217.83 samples/sec	accuracy=0.984375	top_k_accuracy_5=0.998750
+INFO:root:Epoch[85] Batch [120]	Speed: 220.67 samples/sec	accuracy=0.983125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[85] Train-accuracy=1.000000
+INFO:root:Epoch[85] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[85] Time cost=44.349
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0086.params"
+INFO:root:Epoch[85] Validation-accuracy=0.470833
+INFO:root:Epoch[85] Validation-top_k_accuracy_5=0.764583
+INFO:root:Epoch[86] Batch [20]	Speed: 226.15 samples/sec	accuracy=0.983929	top_k_accuracy_5=0.999405
+INFO:root:Epoch[86] Batch [40]	Speed: 221.42 samples/sec	accuracy=0.980625	top_k_accuracy_5=1.000000
+INFO:root:Epoch[86] Batch [60]	Speed: 221.61 samples/sec	accuracy=0.979375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[86] Batch [80]	Speed: 212.84 samples/sec	accuracy=0.982500	top_k_accuracy_5=0.998750
+INFO:root:Epoch[86] Batch [100]	Speed: 218.85 samples/sec	accuracy=0.980625	top_k_accuracy_5=1.000000
+INFO:root:Epoch[86] Batch [120]	Speed: 217.28 samples/sec	accuracy=0.979375	top_k_accuracy_5=0.998750
+INFO:root:Epoch[86] Train-accuracy=nan
+INFO:root:Epoch[86] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[86] Time cost=44.313
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0087.params"
+INFO:root:Epoch[86] Validation-accuracy=0.433929
+INFO:root:Epoch[86] Validation-top_k_accuracy_5=0.739286
+INFO:root:Epoch[87] Batch [20]	Speed: 227.07 samples/sec	accuracy=0.982738	top_k_accuracy_5=1.000000
+INFO:root:Epoch[87] Batch [40]	Speed: 219.91 samples/sec	accuracy=0.983750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[87] Batch [60]	Speed: 220.11 samples/sec	accuracy=0.984375	top_k_accuracy_5=0.999375
+INFO:root:Epoch[87] Batch [80]	Speed: 220.37 samples/sec	accuracy=0.986250	top_k_accuracy_5=0.999375
+INFO:root:Epoch[87] Batch [100]	Speed: 222.16 samples/sec	accuracy=0.986250	top_k_accuracy_5=0.999375
+INFO:root:Epoch[87] Batch [120]	Speed: 222.51 samples/sec	accuracy=0.978125	top_k_accuracy_5=0.999375
+INFO:root:Epoch[87] Train-accuracy=nan
+INFO:root:Epoch[87] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[87] Time cost=43.856
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0088.params"
+INFO:root:Epoch[87] Validation-accuracy=0.462500
+INFO:root:Epoch[87] Validation-top_k_accuracy_5=0.766667
+INFO:root:Epoch[88] Batch [20]	Speed: 227.22 samples/sec	accuracy=0.985119	top_k_accuracy_5=1.000000
+INFO:root:Epoch[88] Batch [40]	Speed: 223.37 samples/sec	accuracy=0.981250	top_k_accuracy_5=0.999375
+INFO:root:Epoch[88] Batch [60]	Speed: 223.85 samples/sec	accuracy=0.981250	top_k_accuracy_5=0.999375
+INFO:root:Epoch[88] Batch [80]	Speed: 216.09 samples/sec	accuracy=0.989375	top_k_accuracy_5=0.999375
+INFO:root:Epoch[88] Batch [100]	Speed: 222.52 samples/sec	accuracy=0.981875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[88] Batch [120]	Speed: 221.74 samples/sec	accuracy=0.983750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[88] Train-accuracy=1.000000
+INFO:root:Epoch[88] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[88] Time cost=44.386
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0089.params"
+INFO:root:Epoch[88] Validation-accuracy=0.506250
+INFO:root:Epoch[88] Validation-top_k_accuracy_5=0.762500
+INFO:root:Epoch[89] Batch [20]	Speed: 228.63 samples/sec	accuracy=0.985119	top_k_accuracy_5=1.000000
+INFO:root:Epoch[89] Batch [40]	Speed: 222.35 samples/sec	accuracy=0.989375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[89] Batch [60]	Speed: 223.42 samples/sec	accuracy=0.984375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[89] Batch [80]	Speed: 225.02 samples/sec	accuracy=0.987500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[89] Batch [100]	Speed: 222.75 samples/sec	accuracy=0.990625	top_k_accuracy_5=1.000000
+INFO:root:Epoch[89] Batch [120]	Speed: 226.03 samples/sec	accuracy=0.987500	top_k_accuracy_5=0.999375
+INFO:root:Epoch[89] Train-accuracy=nan
+INFO:root:Epoch[89] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[89] Time cost=43.334
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0090.params"
+INFO:root:Epoch[89] Validation-accuracy=0.471429
+INFO:root:Epoch[89] Validation-top_k_accuracy_5=0.780357
+INFO:root:Epoch[90] Batch [20]	Speed: 230.28 samples/sec	accuracy=0.985119	top_k_accuracy_5=1.000000
+INFO:root:Epoch[90] Batch [40]	Speed: 223.56 samples/sec	accuracy=0.988750	top_k_accuracy_5=0.999375
+INFO:root:Epoch[90] Batch [60]	Speed: 222.87 samples/sec	accuracy=0.981250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[90] Batch [80]	Speed: 222.87 samples/sec	accuracy=0.980625	top_k_accuracy_5=1.000000
+INFO:root:Epoch[90] Batch [100]	Speed: 224.57 samples/sec	accuracy=0.983750	top_k_accuracy_5=0.999375
+INFO:root:Epoch[90] Batch [120]	Speed: 226.77 samples/sec	accuracy=0.983750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[90] Train-accuracy=0.987500
+INFO:root:Epoch[90] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[90] Time cost=43.614
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0091.params"
+INFO:root:Epoch[90] Validation-accuracy=0.502083
+INFO:root:Epoch[90] Validation-top_k_accuracy_5=0.781250
+INFO:root:Epoch[91] Batch [20]	Speed: 228.12 samples/sec	accuracy=0.990476	top_k_accuracy_5=1.000000
+INFO:root:Epoch[91] Batch [40]	Speed: 223.20 samples/sec	accuracy=0.991250	top_k_accuracy_5=0.998750
+INFO:root:Epoch[91] Batch [60]	Speed: 223.26 samples/sec	accuracy=0.990625	top_k_accuracy_5=0.999375
+INFO:root:Epoch[91] Batch [80]	Speed: 223.60 samples/sec	accuracy=0.991250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[91] Batch [100]	Speed: 225.12 samples/sec	accuracy=0.984375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[91] Batch [120]	Speed: 225.82 samples/sec	accuracy=0.981250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[91] Train-accuracy=nan
+INFO:root:Epoch[91] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[91] Time cost=43.269
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0092.params"
+INFO:root:Epoch[91] Validation-accuracy=0.466071
+INFO:root:Epoch[91] Validation-top_k_accuracy_5=0.737500
+INFO:root:Epoch[92] Batch [20]	Speed: 227.57 samples/sec	accuracy=0.986310	top_k_accuracy_5=1.000000
+INFO:root:Epoch[92] Batch [40]	Speed: 220.16 samples/sec	accuracy=0.986875	top_k_accuracy_5=0.999375
+INFO:root:Epoch[92] Batch [60]	Speed: 223.83 samples/sec	accuracy=0.983750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[92] Batch [80]	Speed: 222.51 samples/sec	accuracy=0.991250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[92] Batch [100]	Speed: 224.25 samples/sec	accuracy=0.988125	top_k_accuracy_5=0.999375
+INFO:root:Epoch[92] Batch [120]	Speed: 226.72 samples/sec	accuracy=0.985625	top_k_accuracy_5=1.000000
+INFO:root:Epoch[92] Train-accuracy=nan
+INFO:root:Epoch[92] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[92] Time cost=43.445
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0093.params"
+INFO:root:Epoch[92] Validation-accuracy=0.466667
+INFO:root:Epoch[92] Validation-top_k_accuracy_5=0.768750
+INFO:root:Epoch[93] Batch [20]	Speed: 227.27 samples/sec	accuracy=0.990476	top_k_accuracy_5=1.000000
+INFO:root:Epoch[93] Batch [40]	Speed: 222.70 samples/sec	accuracy=0.987500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[93] Batch [60]	Speed: 223.53 samples/sec	accuracy=0.989375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[93] Batch [80]	Speed: 222.42 samples/sec	accuracy=0.992500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[93] Batch [100]	Speed: 223.85 samples/sec	accuracy=0.989375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[93] Batch [120]	Speed: 226.60 samples/sec	accuracy=0.992500	top_k_accuracy_5=0.999375
+INFO:root:Epoch[93] Train-accuracy=0.975000
+INFO:root:Epoch[93] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[93] Time cost=43.730
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0094.params"
+INFO:root:Epoch[93] Validation-accuracy=0.500000
+INFO:root:Epoch[93] Validation-top_k_accuracy_5=0.791667
+INFO:root:Epoch[94] Batch [20]	Speed: 229.45 samples/sec	accuracy=0.994048	top_k_accuracy_5=1.000000
+INFO:root:Epoch[94] Batch [40]	Speed: 223.97 samples/sec	accuracy=0.989375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[94] Batch [60]	Speed: 222.68 samples/sec	accuracy=0.988125	top_k_accuracy_5=0.999375
+INFO:root:Epoch[94] Batch [80]	Speed: 224.17 samples/sec	accuracy=0.984375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[94] Batch [100]	Speed: 222.78 samples/sec	accuracy=0.976875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[94] Batch [120]	Speed: 223.16 samples/sec	accuracy=0.980625	top_k_accuracy_5=0.998125
+INFO:root:Epoch[94] Train-accuracy=nan
+INFO:root:Epoch[94] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[94] Time cost=43.404
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0095.params"
+INFO:root:Epoch[94] Validation-accuracy=0.457143
+INFO:root:Epoch[94] Validation-top_k_accuracy_5=0.746429
+INFO:root:Epoch[95] Batch [20]	Speed: 227.49 samples/sec	accuracy=0.991071	top_k_accuracy_5=1.000000
+INFO:root:Epoch[95] Batch [40]	Speed: 223.85 samples/sec	accuracy=0.992500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[95] Batch [60]	Speed: 222.97 samples/sec	accuracy=0.985000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[95] Batch [80]	Speed: 224.73 samples/sec	accuracy=0.989375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[95] Batch [100]	Speed: 224.45 samples/sec	accuracy=0.990000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[95] Batch [120]	Speed: 226.36 samples/sec	accuracy=0.988125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[95] Train-accuracy=nan
+INFO:root:Epoch[95] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[95] Time cost=43.254
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0096.params"
+INFO:root:Epoch[95] Validation-accuracy=0.466667
+INFO:root:Epoch[95] Validation-top_k_accuracy_5=0.737500
+INFO:root:Epoch[96] Batch [20]	Speed: 228.94 samples/sec	accuracy=0.988690	top_k_accuracy_5=1.000000
+INFO:root:Epoch[96] Batch [40]	Speed: 225.08 samples/sec	accuracy=0.988750	top_k_accuracy_5=0.999375
+INFO:root:Epoch[96] Batch [60]	Speed: 222.97 samples/sec	accuracy=0.982500	top_k_accuracy_5=0.999375
+INFO:root:Epoch[96] Batch [80]	Speed: 222.49 samples/sec	accuracy=0.991875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[96] Batch [100]	Speed: 223.05 samples/sec	accuracy=0.986875	top_k_accuracy_5=0.999375
+INFO:root:Epoch[96] Batch [120]	Speed: 224.50 samples/sec	accuracy=0.988750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[96] Train-accuracy=0.987500
+INFO:root:Epoch[96] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[96] Time cost=43.968
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0097.params"
+INFO:root:Epoch[96] Validation-accuracy=0.485714
+INFO:root:Epoch[96] Validation-top_k_accuracy_5=0.778571
+INFO:root:Epoch[97] Batch [20]	Speed: 227.88 samples/sec	accuracy=0.987500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[97] Batch [40]	Speed: 223.70 samples/sec	accuracy=0.991875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[97] Batch [60]	Speed: 222.88 samples/sec	accuracy=0.986875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[97] Batch [80]	Speed: 225.52 samples/sec	accuracy=0.987500	top_k_accuracy_5=0.999375
+INFO:root:Epoch[97] Batch [100]	Speed: 225.26 samples/sec	accuracy=0.988750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[97] Batch [120]	Speed: 226.64 samples/sec	accuracy=0.987500	top_k_accuracy_5=0.999375
+INFO:root:Epoch[97] Train-accuracy=nan
+INFO:root:Epoch[97] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[97] Time cost=43.211
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0098.params"
+INFO:root:Epoch[97] Validation-accuracy=0.493750
+INFO:root:Epoch[97] Validation-top_k_accuracy_5=0.781250
+INFO:root:Epoch[98] Batch [20]	Speed: 229.83 samples/sec	accuracy=0.991071	top_k_accuracy_5=1.000000
+INFO:root:Epoch[98] Batch [40]	Speed: 224.03 samples/sec	accuracy=0.993125	top_k_accuracy_5=0.999375
+INFO:root:Epoch[98] Batch [60]	Speed: 223.17 samples/sec	accuracy=0.991250	top_k_accuracy_5=0.999375
+INFO:root:Epoch[98] Batch [80]	Speed: 218.43 samples/sec	accuracy=0.996875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[98] Batch [100]	Speed: 218.84 samples/sec	accuracy=0.996250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[98] Batch [120]	Speed: 220.49 samples/sec	accuracy=0.992500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[98] Train-accuracy=0.975000
+INFO:root:Epoch[98] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[98] Time cost=44.138
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0099.params"
+INFO:root:Epoch[98] Validation-accuracy=0.531250
+INFO:root:Epoch[98] Validation-top_k_accuracy_5=0.802083
+INFO:root:Epoch[99] Batch [20]	Speed: 229.09 samples/sec	accuracy=0.995238	top_k_accuracy_5=1.000000
+INFO:root:Epoch[99] Batch [40]	Speed: 221.79 samples/sec	accuracy=0.995000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[99] Batch [60]	Speed: 223.53 samples/sec	accuracy=0.992500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[99] Batch [80]	Speed: 224.38 samples/sec	accuracy=0.992500	top_k_accuracy_5=0.999375
+INFO:root:Epoch[99] Batch [100]	Speed: 224.21 samples/sec	accuracy=0.993125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[99] Batch [120]	Speed: 225.90 samples/sec	accuracy=0.988125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[99] Train-accuracy=nan
+INFO:root:Epoch[99] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[99] Time cost=43.287
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0100.params"
+INFO:root:Epoch[99] Validation-accuracy=0.478571
+INFO:root:Epoch[99] Validation-top_k_accuracy_5=0.783929
+INFO:root:Epoch[100] Batch [20]	Speed: 229.50 samples/sec	accuracy=0.992262	top_k_accuracy_5=1.000000
+INFO:root:Epoch[100] Batch [40]	Speed: 222.94 samples/sec	accuracy=0.991875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[100] Batch [60]	Speed: 223.66 samples/sec	accuracy=0.993125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[100] Batch [80]	Speed: 223.15 samples/sec	accuracy=0.993750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[100] Batch [100]	Speed: 224.75 samples/sec	accuracy=0.993750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[100] Batch [120]	Speed: 224.94 samples/sec	accuracy=0.993750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[100] Train-accuracy=nan
+INFO:root:Epoch[100] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[100] Time cost=43.295
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0101.params"
+INFO:root:Epoch[100] Validation-accuracy=0.514583
+INFO:root:Epoch[100] Validation-top_k_accuracy_5=0.793750
+INFO:root:Epoch[101] Batch [20]	Speed: 227.80 samples/sec	accuracy=0.995238	top_k_accuracy_5=0.999405
+INFO:root:Epoch[101] Batch [40]	Speed: 223.23 samples/sec	accuracy=0.990625	top_k_accuracy_5=1.000000
+INFO:root:Epoch[101] Batch [60]	Speed: 223.22 samples/sec	accuracy=0.995625	top_k_accuracy_5=1.000000
+INFO:root:Epoch[101] Batch [80]	Speed: 222.31 samples/sec	accuracy=0.994375	top_k_accuracy_5=0.999375
+INFO:root:Epoch[101] Batch [100]	Speed: 222.64 samples/sec	accuracy=0.996250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[101] Batch [120]	Speed: 222.14 samples/sec	accuracy=0.994375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[101] Train-accuracy=1.000000
+INFO:root:Epoch[101] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[101] Time cost=43.892
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0102.params"
+INFO:root:Epoch[101] Validation-accuracy=0.487500
+INFO:root:Epoch[101] Validation-top_k_accuracy_5=0.773214
+INFO:root:Epoch[102] Batch [20]	Speed: 228.16 samples/sec	accuracy=0.993452	top_k_accuracy_5=1.000000
+INFO:root:Epoch[102] Batch [40]	Speed: 222.59 samples/sec	accuracy=0.994375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[102] Batch [60]	Speed: 221.51 samples/sec	accuracy=0.993750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[102] Batch [80]	Speed: 221.65 samples/sec	accuracy=0.995000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[102] Batch [100]	Speed: 221.42 samples/sec	accuracy=0.994375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[102] Batch [120]	Speed: 222.73 samples/sec	accuracy=0.992500	top_k_accuracy_5=0.999375
+INFO:root:Epoch[102] Train-accuracy=nan
+INFO:root:Epoch[102] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[102] Time cost=43.667
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0103.params"
+INFO:root:Epoch[102] Validation-accuracy=0.477083
+INFO:root:Epoch[102] Validation-top_k_accuracy_5=0.783333
+INFO:root:Epoch[103] Batch [20]	Speed: 226.82 samples/sec	accuracy=0.992857	top_k_accuracy_5=1.000000
+INFO:root:Epoch[103] Batch [40]	Speed: 221.81 samples/sec	accuracy=0.996875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[103] Batch [60]	Speed: 222.33 samples/sec	accuracy=0.994375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[103] Batch [80]	Speed: 221.28 samples/sec	accuracy=0.996875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[103] Batch [100]	Speed: 219.49 samples/sec	accuracy=0.996875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[103] Batch [120]	Speed: 221.71 samples/sec	accuracy=0.995000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[103] Train-accuracy=nan
+INFO:root:Epoch[103] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[103] Time cost=43.818
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0104.params"
+INFO:root:Epoch[103] Validation-accuracy=0.489583
+INFO:root:Epoch[103] Validation-top_k_accuracy_5=0.772917
+INFO:root:Epoch[104] Batch [20]	Speed: 229.52 samples/sec	accuracy=0.993452	top_k_accuracy_5=1.000000
+INFO:root:Epoch[104] Batch [40]	Speed: 221.60 samples/sec	accuracy=0.993750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[104] Batch [60]	Speed: 221.13 samples/sec	accuracy=0.995000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[104] Batch [80]	Speed: 219.11 samples/sec	accuracy=0.996250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[104] Batch [100]	Speed: 218.54 samples/sec	accuracy=0.996250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[104] Batch [120]	Speed: 222.94 samples/sec	accuracy=0.994375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[104] Train-accuracy=0.987500
+INFO:root:Epoch[104] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[104] Time cost=44.460
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0105.params"
+INFO:root:Epoch[104] Validation-accuracy=0.519643
+INFO:root:Epoch[104] Validation-top_k_accuracy_5=0.791071
+INFO:root:Epoch[105] Batch [20]	Speed: 227.47 samples/sec	accuracy=0.994048	top_k_accuracy_5=1.000000
+INFO:root:Epoch[105] Batch [40]	Speed: 201.38 samples/sec	accuracy=0.996250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[105] Batch [60]	Speed: 220.44 samples/sec	accuracy=0.991875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[105] Batch [80]	Speed: 218.29 samples/sec	accuracy=0.995625	top_k_accuracy_5=1.000000
+INFO:root:Epoch[105] Batch [100]	Speed: 214.40 samples/sec	accuracy=0.991250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[105] Batch [120]	Speed: 216.04 samples/sec	accuracy=0.994375	top_k_accuracy_5=0.999375
+INFO:root:Epoch[105] Train-accuracy=nan
+INFO:root:Epoch[105] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[105] Time cost=45.036
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0106.params"
+INFO:root:Epoch[105] Validation-accuracy=0.522917
+INFO:root:Epoch[105] Validation-top_k_accuracy_5=0.768750
+INFO:root:Epoch[106] Batch [20]	Speed: 227.50 samples/sec	accuracy=0.995833	top_k_accuracy_5=1.000000
+INFO:root:Epoch[106] Batch [40]	Speed: 225.07 samples/sec	accuracy=0.995625	top_k_accuracy_5=1.000000
+INFO:root:Epoch[106] Batch [60]	Speed: 223.60 samples/sec	accuracy=0.995625	top_k_accuracy_5=1.000000
+INFO:root:Epoch[106] Batch [80]	Speed: 223.42 samples/sec	accuracy=0.994375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[106] Batch [100]	Speed: 222.94 samples/sec	accuracy=0.995625	top_k_accuracy_5=0.999375
+INFO:root:Epoch[106] Batch [120]	Speed: 222.24 samples/sec	accuracy=0.991250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[106] Train-accuracy=1.000000
+INFO:root:Epoch[106] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[106] Time cost=43.780
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0107.params"
+INFO:root:Epoch[106] Validation-accuracy=0.514286
+INFO:root:Epoch[106] Validation-top_k_accuracy_5=0.789286
+INFO:root:Epoch[107] Batch [20]	Speed: 227.74 samples/sec	accuracy=0.992262	top_k_accuracy_5=1.000000
+INFO:root:Epoch[107] Batch [40]	Speed: 222.28 samples/sec	accuracy=0.993750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[107] Batch [60]	Speed: 221.89 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[107] Batch [80]	Speed: 220.53 samples/sec	accuracy=0.994375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[107] Batch [100]	Speed: 221.50 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[107] Batch [120]	Speed: 221.81 samples/sec	accuracy=0.993750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[107] Train-accuracy=nan
+INFO:root:Epoch[107] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[107] Time cost=43.723
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0108.params"
+INFO:root:Epoch[107] Validation-accuracy=0.485417
+INFO:root:Epoch[107] Validation-top_k_accuracy_5=0.804167
+INFO:root:Epoch[108] Batch [20]	Speed: 227.80 samples/sec	accuracy=0.994048	top_k_accuracy_5=1.000000
+INFO:root:Epoch[108] Batch [40]	Speed: 219.22 samples/sec	accuracy=0.996250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[108] Batch [60]	Speed: 197.94 samples/sec	accuracy=0.996875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[108] Batch [80]	Speed: 224.54 samples/sec	accuracy=0.991875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[108] Batch [100]	Speed: 221.73 samples/sec	accuracy=0.994375	top_k_accuracy_5=0.999375
+INFO:root:Epoch[108] Batch [120]	Speed: 221.26 samples/sec	accuracy=0.995000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[108] Train-accuracy=nan
+INFO:root:Epoch[108] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[108] Time cost=44.567
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0109.params"
+INFO:root:Epoch[108] Validation-accuracy=0.533333
+INFO:root:Epoch[108] Validation-top_k_accuracy_5=0.793750
+INFO:root:Epoch[109] Batch [20]	Speed: 226.00 samples/sec	accuracy=0.997024	top_k_accuracy_5=1.000000
+INFO:root:Epoch[109] Batch [40]	Speed: 219.63 samples/sec	accuracy=0.995000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[109] Batch [60]	Speed: 220.20 samples/sec	accuracy=0.993750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[109] Batch [80]	Speed: 220.03 samples/sec	accuracy=0.993125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[109] Batch [100]	Speed: 219.73 samples/sec	accuracy=0.995625	top_k_accuracy_5=1.000000
+INFO:root:Epoch[109] Batch [120]	Speed: 221.45 samples/sec	accuracy=0.994375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[109] Train-accuracy=1.000000
+INFO:root:Epoch[109] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[109] Time cost=44.359
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0110.params"
+INFO:root:Epoch[109] Validation-accuracy=0.469643
+INFO:root:Epoch[109] Validation-top_k_accuracy_5=0.789286
+INFO:root:Epoch[110] Batch [20]	Speed: 227.87 samples/sec	accuracy=0.991667	top_k_accuracy_5=1.000000
+INFO:root:Epoch[110] Batch [40]	Speed: 222.84 samples/sec	accuracy=0.993750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[110] Batch [60]	Speed: 217.79 samples/sec	accuracy=0.990000	top_k_accuracy_5=0.999375
+INFO:root:Epoch[110] Batch [80]	Speed: 222.11 samples/sec	accuracy=0.996250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[110] Batch [100]	Speed: 215.99 samples/sec	accuracy=0.991875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[110] Batch [120]	Speed: 218.40 samples/sec	accuracy=0.991250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[110] Train-accuracy=nan
+INFO:root:Epoch[110] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[110] Time cost=44.092
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0111.params"
+INFO:root:Epoch[110] Validation-accuracy=0.539583
+INFO:root:Epoch[110] Validation-top_k_accuracy_5=0.775000
+INFO:root:Epoch[111] Batch [20]	Speed: 226.78 samples/sec	accuracy=0.996429	top_k_accuracy_5=1.000000
+INFO:root:Epoch[111] Batch [40]	Speed: 220.20 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[111] Batch [60]	Speed: 221.89 samples/sec	accuracy=0.995000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[111] Batch [80]	Speed: 218.18 samples/sec	accuracy=0.995000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[111] Batch [100]	Speed: 222.10 samples/sec	accuracy=0.991875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[111] Batch [120]	Speed: 223.64 samples/sec	accuracy=0.991875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[111] Train-accuracy=nan
+INFO:root:Epoch[111] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[111] Time cost=43.843
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0112.params"
+INFO:root:Epoch[111] Validation-accuracy=0.517857
+INFO:root:Epoch[111] Validation-top_k_accuracy_5=0.769643
+INFO:root:Epoch[112] Batch [20]	Speed: 228.58 samples/sec	accuracy=0.995833	top_k_accuracy_5=1.000000
+INFO:root:Epoch[112] Batch [40]	Speed: 223.79 samples/sec	accuracy=0.994375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[112] Batch [60]	Speed: 217.69 samples/sec	accuracy=0.990625	top_k_accuracy_5=1.000000
+INFO:root:Epoch[112] Batch [80]	Speed: 221.96 samples/sec	accuracy=0.994375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[112] Batch [100]	Speed: 221.17 samples/sec	accuracy=0.996250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[112] Batch [120]	Speed: 223.77 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[112] Train-accuracy=1.000000
+INFO:root:Epoch[112] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[112] Time cost=44.318
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0113.params"
+INFO:root:Epoch[112] Validation-accuracy=0.514583
+INFO:root:Epoch[112] Validation-top_k_accuracy_5=0.802083
+INFO:root:Epoch[113] Batch [20]	Speed: 227.76 samples/sec	accuracy=0.995833	top_k_accuracy_5=1.000000
+INFO:root:Epoch[113] Batch [40]	Speed: 222.06 samples/sec	accuracy=0.996875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[113] Batch [60]	Speed: 219.10 samples/sec	accuracy=0.995000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[113] Batch [80]	Speed: 216.71 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[113] Batch [100]	Speed: 215.22 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[113] Batch [120]	Speed: 221.61 samples/sec	accuracy=0.996875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[113] Train-accuracy=nan
+INFO:root:Epoch[113] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[113] Time cost=44.196
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0114.params"
+INFO:root:Epoch[113] Validation-accuracy=0.512500
+INFO:root:Epoch[113] Validation-top_k_accuracy_5=0.791667
+INFO:root:Epoch[114] Batch [20]	Speed: 229.97 samples/sec	accuracy=0.997619	top_k_accuracy_5=1.000000
+INFO:root:Epoch[114] Batch [40]	Speed: 222.77 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[114] Batch [60]	Speed: 223.10 samples/sec	accuracy=0.995625	top_k_accuracy_5=1.000000
+INFO:root:Epoch[114] Batch [80]	Speed: 223.27 samples/sec	accuracy=0.996250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[114] Batch [100]	Speed: 224.14 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[114] Batch [120]	Speed: 226.63 samples/sec	accuracy=0.993750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[114] Train-accuracy=0.987500
+INFO:root:Epoch[114] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[114] Time cost=43.642
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0115.params"
+INFO:root:Epoch[114] Validation-accuracy=0.532143
+INFO:root:Epoch[114] Validation-top_k_accuracy_5=0.807143
+INFO:root:Epoch[115] Batch [20]	Speed: 228.21 samples/sec	accuracy=0.996429	top_k_accuracy_5=1.000000
+INFO:root:Epoch[115] Batch [40]	Speed: 221.93 samples/sec	accuracy=0.995000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[115] Batch [60]	Speed: 222.60 samples/sec	accuracy=0.995000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[115] Batch [80]	Speed: 225.46 samples/sec	accuracy=0.995625	top_k_accuracy_5=1.000000
+INFO:root:Epoch[115] Batch [100]	Speed: 222.35 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[115] Batch [120]	Speed: 225.49 samples/sec	accuracy=0.997500	top_k_accuracy_5=0.999375
+INFO:root:Epoch[115] Train-accuracy=nan
+INFO:root:Epoch[115] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[115] Time cost=43.393
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0116.params"
+INFO:root:Epoch[115] Validation-accuracy=0.539583
+INFO:root:Epoch[115] Validation-top_k_accuracy_5=0.797917
+INFO:root:Epoch[116] Batch [20]	Speed: 227.96 samples/sec	accuracy=0.996429	top_k_accuracy_5=1.000000
+INFO:root:Epoch[116] Batch [40]	Speed: 223.13 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[116] Batch [60]	Speed: 221.67 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[116] Batch [80]	Speed: 223.09 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[116] Batch [100]	Speed: 223.24 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[116] Batch [120]	Speed: 224.38 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[116] Train-accuracy=nan
+INFO:root:Epoch[116] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[116] Time cost=43.476
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0117.params"
+INFO:root:Epoch[116] Validation-accuracy=0.546429
+INFO:root:Epoch[116] Validation-top_k_accuracy_5=0.801786
+INFO:root:Epoch[117] Batch [20]	Speed: 228.97 samples/sec	accuracy=0.997619	top_k_accuracy_5=1.000000
+INFO:root:Epoch[117] Batch [40]	Speed: 223.10 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[117] Batch [60]	Speed: 224.59 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[117] Batch [80]	Speed: 223.45 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[117] Batch [100]	Speed: 222.97 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[117] Batch [120]	Speed: 226.17 samples/sec	accuracy=0.996250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[117] Train-accuracy=1.000000
+INFO:root:Epoch[117] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[117] Time cost=43.679
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0118.params"
+INFO:root:Epoch[117] Validation-accuracy=0.550000
+INFO:root:Epoch[117] Validation-top_k_accuracy_5=0.833333
+INFO:root:Epoch[118] Batch [20]	Speed: 226.58 samples/sec	accuracy=0.997024	top_k_accuracy_5=1.000000
+INFO:root:Epoch[118] Batch [40]	Speed: 223.05 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[118] Batch [60]	Speed: 223.56 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[118] Batch [80]	Speed: 225.60 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[118] Batch [100]	Speed: 224.93 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[118] Batch [120]	Speed: 225.45 samples/sec	accuracy=0.995625	top_k_accuracy_5=1.000000
+INFO:root:Epoch[118] Train-accuracy=nan
+INFO:root:Epoch[118] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[118] Time cost=43.288
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0119.params"
+INFO:root:Epoch[118] Validation-accuracy=0.541667
+INFO:root:Epoch[118] Validation-top_k_accuracy_5=0.806250
+INFO:root:Epoch[119] Batch [20]	Speed: 229.64 samples/sec	accuracy=0.997619	top_k_accuracy_5=1.000000
+INFO:root:Epoch[119] Batch [40]	Speed: 224.33 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[119] Batch [60]	Speed: 222.42 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[119] Batch [80]	Speed: 223.74 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[119] Batch [100]	Speed: 223.83 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[119] Batch [120]	Speed: 225.13 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[119] Train-accuracy=nan
+INFO:root:Epoch[119] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[119] Time cost=43.317
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0120.params"
+INFO:root:Epoch[119] Validation-accuracy=0.548214
+INFO:root:Epoch[119] Validation-top_k_accuracy_5=0.835714
+INFO:root:Epoch[120] Batch [20]	Speed: 228.88 samples/sec	accuracy=0.997619	top_k_accuracy_5=1.000000
+INFO:root:Epoch[120] Batch [40]	Speed: 224.90 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[120] Batch [60]	Speed: 223.08 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[120] Batch [80]	Speed: 224.78 samples/sec	accuracy=0.996250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[120] Batch [100]	Speed: 224.15 samples/sec	accuracy=0.995625	top_k_accuracy_5=1.000000
+INFO:root:Epoch[120] Batch [120]	Speed: 227.03 samples/sec	accuracy=0.994375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[120] Train-accuracy=0.987500
+INFO:root:Epoch[120] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[120] Time cost=43.822
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0121.params"
+INFO:root:Epoch[120] Validation-accuracy=0.504167
+INFO:root:Epoch[120] Validation-top_k_accuracy_5=0.785417
+INFO:root:Epoch[121] Batch [20]	Speed: 228.17 samples/sec	accuracy=0.995833	top_k_accuracy_5=1.000000
+INFO:root:Epoch[121] Batch [40]	Speed: 223.76 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[121] Batch [60]	Speed: 223.06 samples/sec	accuracy=0.995000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[121] Batch [80]	Speed: 222.49 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[121] Batch [100]	Speed: 224.35 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[121] Batch [120]	Speed: 226.63 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[121] Train-accuracy=nan
+INFO:root:Epoch[121] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[121] Time cost=43.326
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0122.params"
+INFO:root:Epoch[121] Validation-accuracy=0.512500
+INFO:root:Epoch[121] Validation-top_k_accuracy_5=0.805357
+INFO:root:Epoch[122] Batch [20]	Speed: 227.63 samples/sec	accuracy=0.998810	top_k_accuracy_5=1.000000
+INFO:root:Epoch[122] Batch [40]	Speed: 224.91 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[122] Batch [60]	Speed: 223.34 samples/sec	accuracy=0.996250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[122] Batch [80]	Speed: 223.80 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[122] Batch [100]	Speed: 224.64 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[122] Batch [120]	Speed: 224.54 samples/sec	accuracy=0.996875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[122] Train-accuracy=0.962500
+INFO:root:Epoch[122] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[122] Time cost=43.664
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0123.params"
+INFO:root:Epoch[122] Validation-accuracy=0.522917
+INFO:root:Epoch[122] Validation-top_k_accuracy_5=0.804167
+INFO:root:Epoch[123] Batch [20]	Speed: 228.86 samples/sec	accuracy=0.997024	top_k_accuracy_5=1.000000
+INFO:root:Epoch[123] Batch [40]	Speed: 223.49 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[123] Batch [60]	Speed: 221.58 samples/sec	accuracy=0.996875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[123] Batch [80]	Speed: 222.78 samples/sec	accuracy=0.996875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[123] Batch [100]	Speed: 222.29 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[123] Batch [120]	Speed: 224.74 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[123] Train-accuracy=nan
+INFO:root:Epoch[123] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[123] Time cost=43.491
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0124.params"
+INFO:root:Epoch[123] Validation-accuracy=0.543750
+INFO:root:Epoch[123] Validation-top_k_accuracy_5=0.791667
+INFO:root:Epoch[124] Batch [20]	Speed: 228.58 samples/sec	accuracy=0.994643	top_k_accuracy_5=1.000000
+INFO:root:Epoch[124] Batch [40]	Speed: 221.87 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[124] Batch [60]	Speed: 222.55 samples/sec	accuracy=0.996875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[124] Batch [80]	Speed: 222.47 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[124] Batch [100]	Speed: 221.88 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[124] Batch [120]	Speed: 222.83 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[124] Train-accuracy=nan
+INFO:root:Epoch[124] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[124] Time cost=43.603
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0125.params"
+INFO:root:Epoch[124] Validation-accuracy=0.544643
+INFO:root:Epoch[124] Validation-top_k_accuracy_5=0.805357
+INFO:root:Epoch[125] Batch [20]	Speed: 227.28 samples/sec	accuracy=0.999405	top_k_accuracy_5=1.000000
+INFO:root:Epoch[125] Batch [40]	Speed: 222.72 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[125] Batch [60]	Speed: 223.76 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[125] Batch [80]	Speed: 205.17 samples/sec	accuracy=0.998750	top_k_accuracy_5=0.999375
+INFO:root:Epoch[125] Batch [100]	Speed: 219.90 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[125] Batch [120]	Speed: 225.23 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[125] Train-accuracy=1.000000
+INFO:root:Epoch[125] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[125] Time cost=44.510
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0126.params"
+INFO:root:Epoch[125] Validation-accuracy=0.522917
+INFO:root:Epoch[125] Validation-top_k_accuracy_5=0.812500
+INFO:root:Epoch[126] Batch [20]	Speed: 227.94 samples/sec	accuracy=0.998214	top_k_accuracy_5=1.000000
+INFO:root:Epoch[126] Batch [40]	Speed: 221.55 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[126] Batch [60]	Speed: 223.33 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[126] Batch [80]	Speed: 218.88 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[126] Batch [100]	Speed: 221.35 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[126] Batch [120]	Speed: 219.81 samples/sec	accuracy=0.996875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[126] Train-accuracy=nan
+INFO:root:Epoch[126] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[126] Time cost=43.816
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0127.params"
+INFO:root:Epoch[126] Validation-accuracy=0.523214
+INFO:root:Epoch[126] Validation-top_k_accuracy_5=0.823214
+INFO:root:Epoch[127] Batch [20]	Speed: 226.48 samples/sec	accuracy=0.995833	top_k_accuracy_5=1.000000
+INFO:root:Epoch[127] Batch [40]	Speed: 221.90 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[127] Batch [60]	Speed: 221.03 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[127] Batch [80]	Speed: 220.02 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[127] Batch [100]	Speed: 221.70 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[127] Batch [120]	Speed: 224.10 samples/sec	accuracy=0.996250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[127] Train-accuracy=nan
+INFO:root:Epoch[127] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[127] Time cost=43.729
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0128.params"
+INFO:root:Epoch[127] Validation-accuracy=0.525000
+INFO:root:Epoch[127] Validation-top_k_accuracy_5=0.795833
+INFO:root:Epoch[128] Batch [20]	Speed: 228.42 samples/sec	accuracy=0.999405	top_k_accuracy_5=1.000000
+INFO:root:Epoch[128] Batch [40]	Speed: 222.33 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[128] Batch [60]	Speed: 218.24 samples/sec	accuracy=0.996875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[128] Batch [80]	Speed: 220.45 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[128] Batch [100]	Speed: 219.39 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[128] Batch [120]	Speed: 220.45 samples/sec	accuracy=0.996875	top_k_accuracy_5=0.999375
+INFO:root:Epoch[128] Train-accuracy=1.000000
+INFO:root:Epoch[128] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[128] Time cost=44.589
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0129.params"
+INFO:root:Epoch[128] Validation-accuracy=0.545833
+INFO:root:Epoch[128] Validation-top_k_accuracy_5=0.806250
+INFO:root:Epoch[129] Batch [20]	Speed: 228.11 samples/sec	accuracy=0.999405	top_k_accuracy_5=1.000000
+INFO:root:Epoch[129] Batch [40]	Speed: 222.47 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[129] Batch [60]	Speed: 220.03 samples/sec	accuracy=0.996875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[129] Batch [80]	Speed: 220.63 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[129] Batch [100]	Speed: 220.49 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[129] Batch [120]	Speed: 221.93 samples/sec	accuracy=0.998125	top_k_accuracy_5=0.999375
+INFO:root:Epoch[129] Train-accuracy=nan
+INFO:root:Epoch[129] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[129] Time cost=43.784
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0130.params"
+INFO:root:Epoch[129] Validation-accuracy=0.539286
+INFO:root:Epoch[129] Validation-top_k_accuracy_5=0.807143
+INFO:root:Epoch[130] Batch [20]	Speed: 229.06 samples/sec	accuracy=0.997619	top_k_accuracy_5=1.000000
+INFO:root:Epoch[130] Batch [40]	Speed: 219.35 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[130] Batch [60]	Speed: 221.05 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[130] Batch [80]	Speed: 218.91 samples/sec	accuracy=0.996250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[130] Batch [100]	Speed: 218.62 samples/sec	accuracy=0.998125	top_k_accuracy_5=0.999375
+INFO:root:Epoch[130] Batch [120]	Speed: 218.55 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[130] Train-accuracy=0.987500
+INFO:root:Epoch[130] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[130] Time cost=44.446
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0131.params"
+INFO:root:Epoch[130] Validation-accuracy=0.533333
+INFO:root:Epoch[130] Validation-top_k_accuracy_5=0.814583
+INFO:root:Epoch[131] Batch [20]	Speed: 227.60 samples/sec	accuracy=0.999405	top_k_accuracy_5=1.000000
+INFO:root:Epoch[131] Batch [40]	Speed: 217.47 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[131] Batch [60]	Speed: 222.26 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[131] Batch [80]	Speed: 222.44 samples/sec	accuracy=0.996875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[131] Batch [100]	Speed: 220.63 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[131] Batch [120]	Speed: 211.61 samples/sec	accuracy=0.996875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[131] Train-accuracy=nan
+INFO:root:Epoch[131] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[131] Time cost=44.187
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0132.params"
+INFO:root:Epoch[131] Validation-accuracy=0.555357
+INFO:root:Epoch[131] Validation-top_k_accuracy_5=0.828571
+INFO:root:Epoch[132] Batch [20]	Speed: 227.62 samples/sec	accuracy=0.998214	top_k_accuracy_5=1.000000
+INFO:root:Epoch[132] Batch [40]	Speed: 220.97 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[132] Batch [60]	Speed: 217.56 samples/sec	accuracy=0.996875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[132] Batch [80]	Speed: 189.04 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[132] Batch [100]	Speed: 223.88 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[132] Batch [120]	Speed: 222.83 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[132] Train-accuracy=nan
+INFO:root:Epoch[132] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[132] Time cost=45.056
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0133.params"
+INFO:root:Epoch[132] Validation-accuracy=0.552083
+INFO:root:Epoch[132] Validation-top_k_accuracy_5=0.827083
+INFO:root:Epoch[133] Batch [20]	Speed: 229.02 samples/sec	accuracy=0.999405	top_k_accuracy_5=1.000000
+INFO:root:Epoch[133] Batch [40]	Speed: 218.17 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[133] Batch [60]	Speed: 219.97 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[133] Batch [80]	Speed: 219.37 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[133] Batch [100]	Speed: 220.67 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[133] Batch [120]	Speed: 220.66 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[133] Train-accuracy=1.000000
+INFO:root:Epoch[133] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[133] Time cost=44.354
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0134.params"
+INFO:root:Epoch[133] Validation-accuracy=0.545833
+INFO:root:Epoch[133] Validation-top_k_accuracy_5=0.820833
+INFO:root:Epoch[134] Batch [20]	Speed: 227.42 samples/sec	accuracy=0.997619	top_k_accuracy_5=1.000000
+INFO:root:Epoch[134] Batch [40]	Speed: 218.94 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[134] Batch [60]	Speed: 207.37 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[134] Batch [80]	Speed: 220.92 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[134] Batch [100]	Speed: 219.56 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[134] Batch [120]	Speed: 221.70 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[134] Train-accuracy=nan
+INFO:root:Epoch[134] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[134] Time cost=44.387
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0135.params"
+INFO:root:Epoch[134] Validation-accuracy=0.526786
+INFO:root:Epoch[134] Validation-top_k_accuracy_5=0.821429
+INFO:root:Epoch[135] Batch [20]	Speed: 228.00 samples/sec	accuracy=0.996429	top_k_accuracy_5=1.000000
+INFO:root:Epoch[135] Batch [40]	Speed: 213.33 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[135] Batch [60]	Speed: 219.12 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[135] Batch [80]	Speed: 221.49 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[135] Batch [100]	Speed: 218.51 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[135] Batch [120]	Speed: 222.03 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[135] Train-accuracy=nan
+INFO:root:Epoch[135] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[135] Time cost=44.224
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0136.params"
+INFO:root:Epoch[135] Validation-accuracy=0.529167
+INFO:root:Epoch[135] Validation-top_k_accuracy_5=0.825000
+INFO:root:Epoch[136] Batch [20]	Speed: 227.77 samples/sec	accuracy=0.997024	top_k_accuracy_5=1.000000
+INFO:root:Epoch[136] Batch [40]	Speed: 218.18 samples/sec	accuracy=0.995625	top_k_accuracy_5=1.000000
+INFO:root:Epoch[136] Batch [60]	Speed: 219.39 samples/sec	accuracy=0.996875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[136] Batch [80]	Speed: 221.56 samples/sec	accuracy=0.996250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[136] Batch [100]	Speed: 221.13 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[136] Batch [120]	Speed: 220.92 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[136] Train-accuracy=1.000000
+INFO:root:Epoch[136] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[136] Time cost=44.579
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0137.params"
+INFO:root:Epoch[136] Validation-accuracy=0.555357
+INFO:root:Epoch[136] Validation-top_k_accuracy_5=0.825000
+INFO:root:Epoch[137] Batch [20]	Speed: 228.47 samples/sec	accuracy=0.999405	top_k_accuracy_5=1.000000
+INFO:root:Epoch[137] Batch [40]	Speed: 219.95 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[137] Batch [60]	Speed: 222.13 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[137] Batch [80]	Speed: 216.99 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[137] Batch [100]	Speed: 219.50 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[137] Batch [120]	Speed: 223.02 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[137] Train-accuracy=nan
+INFO:root:Epoch[137] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[137] Time cost=43.895
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0138.params"
+INFO:root:Epoch[137] Validation-accuracy=0.556250
+INFO:root:Epoch[137] Validation-top_k_accuracy_5=0.831250
+INFO:root:Epoch[138] Batch [20]	Speed: 229.02 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[138] Batch [40]	Speed: 220.72 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[138] Batch [60]	Speed: 221.67 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[138] Batch [80]	Speed: 222.08 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[138] Batch [100]	Speed: 221.80 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[138] Batch [120]	Speed: 221.90 samples/sec	accuracy=0.996875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[138] Train-accuracy=1.000000
+INFO:root:Epoch[138] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[138] Time cost=44.078
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0139.params"
+INFO:root:Epoch[138] Validation-accuracy=0.527083
+INFO:root:Epoch[138] Validation-top_k_accuracy_5=0.822917
+INFO:root:Epoch[139] Batch [20]	Speed: 228.52 samples/sec	accuracy=0.997024	top_k_accuracy_5=1.000000
+INFO:root:Epoch[139] Batch [40]	Speed: 223.38 samples/sec	accuracy=0.996250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[139] Batch [60]	Speed: 219.82 samples/sec	accuracy=0.996875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[139] Batch [80]	Speed: 222.61 samples/sec	accuracy=0.996250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[139] Batch [100]	Speed: 223.43 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[139] Batch [120]	Speed: 223.35 samples/sec	accuracy=0.996250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[139] Train-accuracy=nan
+INFO:root:Epoch[139] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[139] Time cost=43.551
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0140.params"
+INFO:root:Epoch[139] Validation-accuracy=0.525000
+INFO:root:Epoch[139] Validation-top_k_accuracy_5=0.837500
+INFO:root:Epoch[140] Batch [20]	Speed: 226.70 samples/sec	accuracy=0.995833	top_k_accuracy_5=1.000000
+INFO:root:Epoch[140] Batch [40]	Speed: 221.95 samples/sec	accuracy=0.996875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[140] Batch [60]	Speed: 222.39 samples/sec	accuracy=0.995000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[140] Batch [80]	Speed: 224.20 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[140] Batch [100]	Speed: 222.25 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[140] Batch [120]	Speed: 224.71 samples/sec	accuracy=0.996875	top_k_accuracy_5=1.000000
+INFO:root:Epoch[140] Train-accuracy=nan
+INFO:root:Epoch[140] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[140] Time cost=43.498
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0141.params"
+INFO:root:Epoch[140] Validation-accuracy=0.566667
+INFO:root:Epoch[140] Validation-top_k_accuracy_5=0.839583
+INFO:root:Epoch[141] Batch [20]	Speed: 229.50 samples/sec	accuracy=0.998810	top_k_accuracy_5=1.000000
+INFO:root:Epoch[141] Batch [40]	Speed: 222.15 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[141] Batch [60]	Speed: 223.18 samples/sec	accuracy=0.996875	top_k_accuracy_5=0.999375
+INFO:root:Epoch[141] Batch [80]	Speed: 223.65 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[141] Batch [100]	Speed: 223.16 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[141] Batch [120]	Speed: 224.61 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[141] Train-accuracy=1.000000
+INFO:root:Epoch[141] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[141] Time cost=43.758
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0142.params"
+INFO:root:Epoch[141] Validation-accuracy=0.551786
+INFO:root:Epoch[141] Validation-top_k_accuracy_5=0.832143
+INFO:root:Epoch[142] Batch [20]	Speed: 226.85 samples/sec	accuracy=0.998810	top_k_accuracy_5=1.000000
+INFO:root:Epoch[142] Batch [40]	Speed: 220.69 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[142] Batch [60]	Speed: 221.85 samples/sec	accuracy=0.998125	top_k_accuracy_5=0.999375
+INFO:root:Epoch[142] Batch [80]	Speed: 221.78 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[142] Batch [100]	Speed: 223.82 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[142] Batch [120]	Speed: 225.15 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[142] Train-accuracy=nan
+INFO:root:Epoch[142] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[142] Time cost=43.580
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0143.params"
+INFO:root:Epoch[142] Validation-accuracy=0.535417
+INFO:root:Epoch[142] Validation-top_k_accuracy_5=0.818750
+INFO:root:Epoch[143] Batch [20]	Speed: 227.72 samples/sec	accuracy=0.997024	top_k_accuracy_5=1.000000
+INFO:root:Epoch[143] Batch [40]	Speed: 222.83 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[143] Batch [60]	Speed: 223.15 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[143] Batch [80]	Speed: 223.97 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[143] Batch [100]	Speed: 222.90 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[143] Batch [120]	Speed: 225.50 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[143] Train-accuracy=nan
+INFO:root:Epoch[143] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[143] Time cost=43.396
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0144.params"
+INFO:root:Epoch[143] Validation-accuracy=0.545833
+INFO:root:Epoch[143] Validation-top_k_accuracy_5=0.818750
+INFO:root:Epoch[144] Batch [20]	Speed: 228.34 samples/sec	accuracy=0.997619	top_k_accuracy_5=0.999405
+INFO:root:Epoch[144] Batch [40]	Speed: 222.05 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[144] Batch [60]	Speed: 224.12 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[144] Batch [80]	Speed: 223.12 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[144] Batch [100]	Speed: 223.49 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[144] Batch [120]	Speed: 225.56 samples/sec	accuracy=0.996250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[144] Train-accuracy=1.000000
+INFO:root:Epoch[144] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[144] Time cost=44.006
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0145.params"
+INFO:root:Epoch[144] Validation-accuracy=0.535714
+INFO:root:Epoch[144] Validation-top_k_accuracy_5=0.807143
+INFO:root:Epoch[145] Batch [20]	Speed: 229.72 samples/sec	accuracy=0.998214	top_k_accuracy_5=1.000000
+INFO:root:Epoch[145] Batch [40]	Speed: 223.74 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[145] Batch [60]	Speed: 224.87 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[145] Batch [80]	Speed: 223.09 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[145] Batch [100]	Speed: 222.35 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[145] Batch [120]	Speed: 225.85 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[145] Train-accuracy=nan
+INFO:root:Epoch[145] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[145] Time cost=43.281
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0146.params"
+INFO:root:Epoch[145] Validation-accuracy=0.537500
+INFO:root:Epoch[145] Validation-top_k_accuracy_5=0.812500
+INFO:root:Epoch[146] Batch [20]	Speed: 229.33 samples/sec	accuracy=0.998214	top_k_accuracy_5=1.000000
+INFO:root:Epoch[146] Batch [40]	Speed: 222.79 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[146] Batch [60]	Speed: 224.07 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[146] Batch [80]	Speed: 225.66 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[146] Batch [100]	Speed: 224.13 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[146] Batch [120]	Speed: 226.06 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[146] Train-accuracy=1.000000
+INFO:root:Epoch[146] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[146] Time cost=43.568
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0147.params"
+INFO:root:Epoch[146] Validation-accuracy=0.558929
+INFO:root:Epoch[146] Validation-top_k_accuracy_5=0.833929
+INFO:root:Epoch[147] Batch [20]	Speed: 227.04 samples/sec	accuracy=0.998810	top_k_accuracy_5=1.000000
+INFO:root:Epoch[147] Batch [40]	Speed: 223.06 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[147] Batch [60]	Speed: 223.66 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[147] Batch [80]	Speed: 223.05 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[147] Batch [100]	Speed: 222.20 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[147] Batch [120]	Speed: 223.55 samples/sec	accuracy=0.996250	top_k_accuracy_5=1.000000
+INFO:root:Epoch[147] Train-accuracy=nan
+INFO:root:Epoch[147] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[147] Time cost=43.506
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0148.params"
+INFO:root:Epoch[147] Validation-accuracy=0.531250
+INFO:root:Epoch[147] Validation-top_k_accuracy_5=0.818750
+INFO:root:Epoch[148] Batch [20]	Speed: 226.54 samples/sec	accuracy=0.997619	top_k_accuracy_5=1.000000
+INFO:root:Epoch[148] Batch [40]	Speed: 222.57 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[148] Batch [60]	Speed: 222.67 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[148] Batch [80]	Speed: 222.38 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[148] Batch [100]	Speed: 223.62 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[148] Batch [120]	Speed: 225.53 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[148] Train-accuracy=nan
+INFO:root:Epoch[148] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[148] Time cost=43.475
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0149.params"
+INFO:root:Epoch[148] Validation-accuracy=0.550000
+INFO:root:Epoch[148] Validation-top_k_accuracy_5=0.827083
+INFO:root:Epoch[149] Batch [20]	Speed: 228.23 samples/sec	accuracy=0.998810	top_k_accuracy_5=1.000000
+INFO:root:Epoch[149] Batch [40]	Speed: 223.60 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[149] Batch [60]	Speed: 223.39 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[149] Batch [80]	Speed: 221.39 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[149] Batch [100]	Speed: 218.05 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[149] Batch [120]	Speed: 223.51 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[149] Train-accuracy=1.000000
+INFO:root:Epoch[149] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[149] Time cost=44.046
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0150.params"
+INFO:root:Epoch[149] Validation-accuracy=0.558929
+INFO:root:Epoch[149] Validation-top_k_accuracy_5=0.825000
+INFO:root:Epoch[150] Batch [20]	Speed: 228.76 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[150] Batch [40]	Speed: 223.25 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[150] Batch [60]	Speed: 222.03 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[150] Batch [80]	Speed: 220.58 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[150] Batch [100]	Speed: 220.96 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[150] Batch [120]	Speed: 222.87 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[150] Train-accuracy=nan
+INFO:root:Epoch[150] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[150] Time cost=43.661
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0151.params"
+INFO:root:Epoch[150] Validation-accuracy=0.558333
+INFO:root:Epoch[150] Validation-top_k_accuracy_5=0.820833
+INFO:root:Epoch[151] Batch [20]	Speed: 229.64 samples/sec	accuracy=0.998810	top_k_accuracy_5=1.000000
+INFO:root:Epoch[151] Batch [40]	Speed: 220.79 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[151] Batch [60]	Speed: 216.10 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[151] Batch [80]	Speed: 221.19 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[151] Batch [100]	Speed: 220.04 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[151] Batch [120]	Speed: 214.03 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[151] Train-accuracy=nan
+INFO:root:Epoch[151] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[151] Time cost=44.230
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0152.params"
+INFO:root:Epoch[151] Validation-accuracy=0.571429
+INFO:root:Epoch[151] Validation-top_k_accuracy_5=0.833929
+INFO:root:Epoch[152] Batch [20]	Speed: 228.49 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[152] Batch [40]	Speed: 223.01 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[152] Batch [60]	Speed: 221.06 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[152] Batch [80]	Speed: 216.11 samples/sec	accuracy=0.998750	top_k_accuracy_5=0.999375
+INFO:root:Epoch[152] Batch [100]	Speed: 213.12 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[152] Batch [120]	Speed: 220.09 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[152] Train-accuracy=1.000000
+INFO:root:Epoch[152] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[152] Time cost=44.806
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0153.params"
+INFO:root:Epoch[152] Validation-accuracy=0.529167
+INFO:root:Epoch[152] Validation-top_k_accuracy_5=0.806250
+INFO:root:Epoch[153] Batch [20]	Speed: 227.40 samples/sec	accuracy=0.999405	top_k_accuracy_5=1.000000
+INFO:root:Epoch[153] Batch [40]	Speed: 222.38 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[153] Batch [60]	Speed: 221.12 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[153] Batch [80]	Speed: 220.60 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[153] Batch [100]	Speed: 189.16 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[153] Batch [120]	Speed: 225.38 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[153] Train-accuracy=nan
+INFO:root:Epoch[153] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[153] Time cost=44.888
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0154.params"
+INFO:root:Epoch[153] Validation-accuracy=0.539583
+INFO:root:Epoch[153] Validation-top_k_accuracy_5=0.791667
+INFO:root:Epoch[154] Batch [20]	Speed: 228.00 samples/sec	accuracy=0.998810	top_k_accuracy_5=1.000000
+INFO:root:Epoch[154] Batch [40]	Speed: 223.66 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[154] Batch [60]	Speed: 217.87 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[154] Batch [80]	Speed: 193.05 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[154] Batch [100]	Speed: 214.87 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[154] Batch [120]	Speed: 224.39 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[154] Train-accuracy=1.000000
+INFO:root:Epoch[154] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[154] Time cost=45.345
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0155.params"
+INFO:root:Epoch[154] Validation-accuracy=0.542857
+INFO:root:Epoch[154] Validation-top_k_accuracy_5=0.837500
+INFO:root:Epoch[155] Batch [20]	Speed: 228.18 samples/sec	accuracy=0.998810	top_k_accuracy_5=1.000000
+INFO:root:Epoch[155] Batch [40]	Speed: 221.26 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[155] Batch [60]	Speed: 221.40 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[155] Batch [80]	Speed: 222.27 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[155] Batch [100]	Speed: 204.47 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[155] Batch [120]	Speed: 222.58 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[155] Train-accuracy=nan
+INFO:root:Epoch[155] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[155] Time cost=44.286
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0156.params"
+INFO:root:Epoch[155] Validation-accuracy=0.547917
+INFO:root:Epoch[155] Validation-top_k_accuracy_5=0.816667
+INFO:root:Epoch[156] Batch [20]	Speed: 227.54 samples/sec	accuracy=0.999405	top_k_accuracy_5=1.000000
+INFO:root:Epoch[156] Batch [40]	Speed: 221.28 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[156] Batch [60]	Speed: 222.24 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[156] Batch [80]	Speed: 218.42 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[156] Batch [100]	Speed: 221.27 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[156] Batch [120]	Speed: 220.20 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[156] Train-accuracy=nan
+INFO:root:Epoch[156] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[156] Time cost=43.903
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0157.params"
+INFO:root:Epoch[156] Validation-accuracy=0.578571
+INFO:root:Epoch[156] Validation-top_k_accuracy_5=0.830357
+INFO:root:Epoch[157] Batch [20]	Speed: 227.02 samples/sec	accuracy=0.998810	top_k_accuracy_5=1.000000
+INFO:root:Epoch[157] Batch [40]	Speed: 221.12 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[157] Batch [60]	Speed: 219.46 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[157] Batch [80]	Speed: 220.99 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[157] Batch [100]	Speed: 221.17 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[157] Batch [120]	Speed: 216.72 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[157] Train-accuracy=1.000000
+INFO:root:Epoch[157] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[157] Time cost=44.422
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0158.params"
+INFO:root:Epoch[157] Validation-accuracy=0.560417
+INFO:root:Epoch[157] Validation-top_k_accuracy_5=0.816667
+INFO:root:Epoch[158] Batch [20]	Speed: 225.78 samples/sec	accuracy=0.998810	top_k_accuracy_5=1.000000
+INFO:root:Epoch[158] Batch [40]	Speed: 219.75 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[158] Batch [60]	Speed: 221.87 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[158] Batch [80]	Speed: 216.07 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[158] Batch [100]	Speed: 220.14 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[158] Batch [120]	Speed: 221.63 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[158] Train-accuracy=nan
+INFO:root:Epoch[158] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[158] Time cost=44.073
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0159.params"
+INFO:root:Epoch[158] Validation-accuracy=0.554167
+INFO:root:Epoch[158] Validation-top_k_accuracy_5=0.812500
+INFO:root:Epoch[159] Batch [20]	Speed: 227.30 samples/sec	accuracy=0.996429	top_k_accuracy_5=1.000000
+INFO:root:Epoch[159] Batch [40]	Speed: 219.77 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[159] Batch [60]	Speed: 220.95 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[159] Batch [80]	Speed: 218.58 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[159] Batch [100]	Speed: 218.09 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[159] Batch [120]	Speed: 222.65 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[159] Train-accuracy=nan
+INFO:root:Epoch[159] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[159] Time cost=44.007
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0160.params"
+INFO:root:Epoch[159] Validation-accuracy=0.530357
+INFO:root:Epoch[159] Validation-top_k_accuracy_5=0.810714
+INFO:root:Epoch[160] Batch [20]	Speed: 227.21 samples/sec	accuracy=0.997024	top_k_accuracy_5=1.000000
+INFO:root:Epoch[160] Batch [40]	Speed: 221.55 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[160] Batch [60]	Speed: 219.78 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[160] Batch [80]	Speed: 221.04 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[160] Batch [100]	Speed: 204.98 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[160] Batch [120]	Speed: 222.61 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[160] Train-accuracy=1.000000
+INFO:root:Epoch[160] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[160] Time cost=45.002
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0161.params"
+INFO:root:Epoch[160] Validation-accuracy=0.541667
+INFO:root:Epoch[160] Validation-top_k_accuracy_5=0.822917
+INFO:root:Epoch[161] Batch [20]	Speed: 228.12 samples/sec	accuracy=0.999405	top_k_accuracy_5=1.000000
+INFO:root:Epoch[161] Batch [40]	Speed: 224.09 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[161] Batch [60]	Speed: 223.85 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[161] Batch [80]	Speed: 225.76 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[161] Batch [100]	Speed: 218.97 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[161] Batch [120]	Speed: 216.61 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[161] Train-accuracy=nan
+INFO:root:Epoch[161] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[161] Time cost=43.682
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0162.params"
+INFO:root:Epoch[161] Validation-accuracy=0.587500
+INFO:root:Epoch[161] Validation-top_k_accuracy_5=0.819643
+INFO:root:Epoch[162] Batch [20]	Speed: 227.72 samples/sec	accuracy=0.999405	top_k_accuracy_5=1.000000
+INFO:root:Epoch[162] Batch [40]	Speed: 223.29 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[162] Batch [60]	Speed: 222.33 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[162] Batch [80]	Speed: 222.77 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[162] Batch [100]	Speed: 223.20 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[162] Batch [120]	Speed: 224.04 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[162] Train-accuracy=1.000000
+INFO:root:Epoch[162] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[162] Time cost=43.812
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0163.params"
+INFO:root:Epoch[162] Validation-accuracy=0.560417
+INFO:root:Epoch[162] Validation-top_k_accuracy_5=0.822917
+INFO:root:Epoch[163] Batch [20]	Speed: 230.54 samples/sec	accuracy=0.998810	top_k_accuracy_5=1.000000
+INFO:root:Epoch[163] Batch [40]	Speed: 222.59 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[163] Batch [60]	Speed: 223.17 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[163] Batch [80]	Speed: 223.75 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[163] Batch [100]	Speed: 222.98 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[163] Batch [120]	Speed: 225.88 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[163] Train-accuracy=nan
+INFO:root:Epoch[163] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[163] Time cost=43.351
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0164.params"
+INFO:root:Epoch[163] Validation-accuracy=0.566667
+INFO:root:Epoch[163] Validation-top_k_accuracy_5=0.820833
+INFO:root:Epoch[164] Batch [20]	Speed: 228.53 samples/sec	accuracy=0.998810	top_k_accuracy_5=1.000000
+INFO:root:Epoch[164] Batch [40]	Speed: 223.03 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[164] Batch [60]	Speed: 223.22 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[164] Batch [80]	Speed: 225.63 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[164] Batch [100]	Speed: 223.84 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[164] Batch [120]	Speed: 225.51 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[164] Train-accuracy=nan
+INFO:root:Epoch[164] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[164] Time cost=43.263
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0165.params"
+INFO:root:Epoch[164] Validation-accuracy=0.546429
+INFO:root:Epoch[164] Validation-top_k_accuracy_5=0.821429
+INFO:root:Epoch[165] Batch [20]	Speed: 228.96 samples/sec	accuracy=0.999405	top_k_accuracy_5=1.000000
+INFO:root:Epoch[165] Batch [40]	Speed: 223.89 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[165] Batch [60]	Speed: 222.31 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[165] Batch [80]	Speed: 225.19 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[165] Batch [100]	Speed: 225.21 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[165] Batch [120]	Speed: 223.61 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[165] Train-accuracy=1.000000
+INFO:root:Epoch[165] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[165] Time cost=43.653
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0166.params"
+INFO:root:Epoch[165] Validation-accuracy=0.570833
+INFO:root:Epoch[165] Validation-top_k_accuracy_5=0.835417
+INFO:root:Epoch[166] Batch [20]	Speed: 227.87 samples/sec	accuracy=0.999405	top_k_accuracy_5=1.000000
+INFO:root:Epoch[166] Batch [40]	Speed: 222.62 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[166] Batch [60]	Speed: 223.86 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[166] Batch [80]	Speed: 224.85 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[166] Batch [100]	Speed: 223.86 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[166] Batch [120]	Speed: 226.11 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[166] Train-accuracy=nan
+INFO:root:Epoch[166] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[166] Time cost=43.305
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0167.params"
+INFO:root:Epoch[166] Validation-accuracy=0.566071
+INFO:root:Epoch[166] Validation-top_k_accuracy_5=0.848214
+INFO:root:Epoch[167] Batch [20]	Speed: 228.54 samples/sec	accuracy=0.998214	top_k_accuracy_5=1.000000
+INFO:root:Epoch[167] Batch [40]	Speed: 223.05 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[167] Batch [60]	Speed: 222.50 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[167] Batch [80]	Speed: 224.95 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[167] Batch [100]	Speed: 225.16 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[167] Batch [120]	Speed: 224.68 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[167] Train-accuracy=nan
+INFO:root:Epoch[167] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[167] Time cost=43.310
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0168.params"
+INFO:root:Epoch[167] Validation-accuracy=0.560417
+INFO:root:Epoch[167] Validation-top_k_accuracy_5=0.837500
+INFO:root:Epoch[168] Batch [20]	Speed: 227.57 samples/sec	accuracy=0.997619	top_k_accuracy_5=1.000000
+INFO:root:Epoch[168] Batch [40]	Speed: 223.21 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[168] Batch [60]	Speed: 222.64 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[168] Batch [80]	Speed: 225.82 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[168] Batch [100]	Speed: 223.09 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[168] Batch [120]	Speed: 225.82 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[168] Train-accuracy=1.000000
+INFO:root:Epoch[168] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[168] Time cost=43.920
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0169.params"
+INFO:root:Epoch[168] Validation-accuracy=0.572917
+INFO:root:Epoch[168] Validation-top_k_accuracy_5=0.831250
+INFO:root:Epoch[169] Batch [20]	Speed: 227.94 samples/sec	accuracy=0.999405	top_k_accuracy_5=1.000000
+INFO:root:Epoch[169] Batch [40]	Speed: 222.70 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[169] Batch [60]	Speed: 222.21 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[169] Batch [80]	Speed: 223.03 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[169] Batch [100]	Speed: 224.71 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[169] Batch [120]	Speed: 225.91 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[169] Train-accuracy=nan
+INFO:root:Epoch[169] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[169] Time cost=43.390
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0170.params"
+INFO:root:Epoch[169] Validation-accuracy=0.566071
+INFO:root:Epoch[169] Validation-top_k_accuracy_5=0.826786
+INFO:root:Epoch[170] Batch [20]	Speed: 229.96 samples/sec	accuracy=0.998810	top_k_accuracy_5=1.000000
+INFO:root:Epoch[170] Batch [40]	Speed: 223.35 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[170] Batch [60]	Speed: 223.90 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[170] Batch [80]	Speed: 224.61 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[170] Batch [100]	Speed: 224.47 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[170] Batch [120]	Speed: 225.91 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[170] Train-accuracy=1.000000
+INFO:root:Epoch[170] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[170] Time cost=43.582
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0171.params"
+INFO:root:Epoch[170] Validation-accuracy=0.545833
+INFO:root:Epoch[170] Validation-top_k_accuracy_5=0.827083
+INFO:root:Epoch[171] Batch [20]	Speed: 228.36 samples/sec	accuracy=0.999405	top_k_accuracy_5=1.000000
+INFO:root:Epoch[171] Batch [40]	Speed: 223.06 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[171] Batch [60]	Speed: 223.32 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[171] Batch [80]	Speed: 223.80 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[171] Batch [100]	Speed: 224.13 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[171] Batch [120]	Speed: 224.70 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[171] Train-accuracy=nan
+INFO:root:Epoch[171] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[171] Time cost=43.345
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0172.params"
+INFO:root:Epoch[171] Validation-accuracy=0.569643
+INFO:root:Epoch[171] Validation-top_k_accuracy_5=0.844643
+INFO:root:Epoch[172] Batch [20]	Speed: 229.85 samples/sec	accuracy=0.999405	top_k_accuracy_5=1.000000
+INFO:root:Epoch[172] Batch [40]	Speed: 222.34 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[172] Batch [60]	Speed: 223.43 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[172] Batch [80]	Speed: 224.17 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[172] Batch [100]	Speed: 221.70 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[172] Batch [120]	Speed: 223.58 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[172] Train-accuracy=nan
+INFO:root:Epoch[172] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[172] Time cost=43.430
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0173.params"
+INFO:root:Epoch[172] Validation-accuracy=0.572917
+INFO:root:Epoch[172] Validation-top_k_accuracy_5=0.841667
+INFO:root:Epoch[173] Batch [20]	Speed: 229.14 samples/sec	accuracy=0.999405	top_k_accuracy_5=1.000000
+INFO:root:Epoch[173] Batch [40]	Speed: 222.92 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[173] Batch [60]	Speed: 222.30 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[173] Batch [80]	Speed: 223.07 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[173] Batch [100]	Speed: 219.86 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[173] Batch [120]	Speed: 223.05 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[173] Train-accuracy=1.000000
+INFO:root:Epoch[173] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[173] Time cost=43.916
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0174.params"
+INFO:root:Epoch[173] Validation-accuracy=0.581250
+INFO:root:Epoch[173] Validation-top_k_accuracy_5=0.827083
+INFO:root:Epoch[174] Batch [20]	Speed: 227.92 samples/sec	accuracy=0.998214	top_k_accuracy_5=1.000000
+INFO:root:Epoch[174] Batch [40]	Speed: 219.38 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[174] Batch [60]	Speed: 221.11 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[174] Batch [80]	Speed: 222.50 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[174] Batch [100]	Speed: 221.73 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[174] Batch [120]	Speed: 225.69 samples/sec	accuracy=0.997500	top_k_accuracy_5=1.000000
+INFO:root:Epoch[174] Train-accuracy=nan
+INFO:root:Epoch[174] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[174] Time cost=43.649
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0175.params"
+INFO:root:Epoch[174] Validation-accuracy=0.562500
+INFO:root:Epoch[174] Validation-top_k_accuracy_5=0.812500
+INFO:root:Epoch[175] Batch [20]	Speed: 229.50 samples/sec	accuracy=0.999405	top_k_accuracy_5=1.000000
+INFO:root:Epoch[175] Batch [40]	Speed: 223.54 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[175] Batch [60]	Speed: 221.66 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[175] Batch [80]	Speed: 223.16 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[175] Batch [100]	Speed: 224.15 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[175] Batch [120]	Speed: 227.64 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[175] Train-accuracy=nan
+INFO:root:Epoch[175] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[175] Time cost=43.267
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0176.params"
+INFO:root:Epoch[175] Validation-accuracy=0.566667
+INFO:root:Epoch[175] Validation-top_k_accuracy_5=0.831250
+INFO:root:Epoch[176] Batch [20]	Speed: 228.10 samples/sec	accuracy=0.998810	top_k_accuracy_5=1.000000
+INFO:root:Epoch[176] Batch [40]	Speed: 223.46 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[176] Batch [60]	Speed: 222.66 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[176] Batch [80]	Speed: 225.31 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[176] Batch [100]	Speed: 223.66 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[176] Batch [120]	Speed: 224.47 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[176] Train-accuracy=1.000000
+INFO:root:Epoch[176] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[176] Time cost=43.959
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0177.params"
+INFO:root:Epoch[176] Validation-accuracy=0.582143
+INFO:root:Epoch[176] Validation-top_k_accuracy_5=0.832143
+INFO:root:Epoch[177] Batch [20]	Speed: 229.23 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[177] Batch [40]	Speed: 221.62 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[177] Batch [60]	Speed: 224.32 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[177] Batch [80]	Speed: 222.59 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[177] Batch [100]	Speed: 223.57 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[177] Batch [120]	Speed: 226.35 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[177] Train-accuracy=nan
+INFO:root:Epoch[177] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[177] Time cost=43.340
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0178.params"
+INFO:root:Epoch[177] Validation-accuracy=0.520833
+INFO:root:Epoch[177] Validation-top_k_accuracy_5=0.800000
+INFO:root:Epoch[178] Batch [20]	Speed: 229.62 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[178] Batch [40]	Speed: 222.57 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[178] Batch [60]	Speed: 223.75 samples/sec	accuracy=0.998125	top_k_accuracy_5=1.000000
+INFO:root:Epoch[178] Batch [80]	Speed: 221.80 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[178] Batch [100]	Speed: 223.60 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[178] Batch [120]	Speed: 224.26 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[178] Train-accuracy=1.000000
+INFO:root:Epoch[178] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[178] Time cost=43.768
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0179.params"
+INFO:root:Epoch[178] Validation-accuracy=0.568750
+INFO:root:Epoch[178] Validation-top_k_accuracy_5=0.837500
+INFO:root:Epoch[179] Batch [20]	Speed: 230.44 samples/sec	accuracy=0.998810	top_k_accuracy_5=1.000000
+INFO:root:Epoch[179] Batch [40]	Speed: 222.71 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[179] Batch [60]	Speed: 225.08 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[179] Batch [80]	Speed: 225.37 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[179] Batch [100]	Speed: 224.20 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[179] Batch [120]	Speed: 224.30 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[179] Train-accuracy=nan
+INFO:root:Epoch[179] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[179] Time cost=43.224
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0180.params"
+INFO:root:Epoch[179] Validation-accuracy=0.583929
+INFO:root:Epoch[179] Validation-top_k_accuracy_5=0.833929
+INFO:root:Epoch[180] Batch [20]	Speed: 227.64 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[180] Batch [40]	Speed: 221.65 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[180] Batch [60]	Speed: 224.45 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[180] Batch [80]	Speed: 223.72 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[180] Batch [100]	Speed: 224.54 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[180] Batch [120]	Speed: 224.82 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[180] Train-accuracy=nan
+INFO:root:Epoch[180] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[180] Time cost=43.379
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0181.params"
+INFO:root:Epoch[180] Validation-accuracy=0.575000
+INFO:root:Epoch[180] Validation-top_k_accuracy_5=0.833333
+INFO:root:Epoch[181] Batch [20]	Speed: 229.25 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[181] Batch [40]	Speed: 222.78 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[181] Batch [60]	Speed: 222.02 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[181] Batch [80]	Speed: 221.80 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[181] Batch [100]	Speed: 223.70 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[181] Batch [120]	Speed: 224.99 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[181] Train-accuracy=1.000000
+INFO:root:Epoch[181] Train-top_k_accuracy_5=1.000000
+INFO:root:Epoch[181] Time cost=43.795
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0182.params"
+INFO:root:Epoch[181] Validation-accuracy=0.594643
+INFO:root:Epoch[181] Validation-top_k_accuracy_5=0.832143
+INFO:root:Epoch[182] Batch [20]	Speed: 228.21 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[182] Batch [40]	Speed: 220.57 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[182] Batch [60]	Speed: 221.52 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[182] Batch [80]	Speed: 220.32 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[182] Batch [100]	Speed: 221.96 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[182] Batch [120]	Speed: 223.53 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[182] Train-accuracy=nan
+INFO:root:Epoch[182] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[182] Time cost=43.715
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0183.params"
+INFO:root:Epoch[182] Validation-accuracy=0.572917
+INFO:root:Epoch[182] Validation-top_k_accuracy_5=0.833333
+INFO:root:Epoch[183] Batch [20]	Speed: 227.97 samples/sec	accuracy=0.998810	top_k_accuracy_5=1.000000
+INFO:root:Epoch[183] Batch [40]	Speed: 220.22 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[183] Batch [60]	Speed: 221.86 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[183] Batch [80]	Speed: 222.49 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[183] Batch [100]	Speed: 221.73 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[183] Batch [120]	Speed: 221.66 samples/sec	accuracy=0.998750	top_k_accuracy_5=1.000000
+INFO:root:Epoch[183] Train-accuracy=nan
+INFO:root:Epoch[183] Train-top_k_accuracy_5=nan
+INFO:root:Epoch[183] Time cost=43.726
+INFO:root:Saved checkpoint to "./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01-0184.params"
+INFO:root:Epoch[183] Validation-accuracy=0.587500
+INFO:root:Epoch[183] Validation-top_k_accuracy_5=0.833333
+INFO:root:Epoch[184] Batch [20]	Speed: 228.05 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[184] Batch [40]	Speed: 225.00 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[184] Batch [60]	Speed: 223.62 samples/sec	accuracy=0.999375	top_k_accuracy_5=1.000000
+INFO:root:Epoch[184] Batch [80]	Speed: 222.26 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+INFO:root:Epoch[184] Batch [100]	Speed: 223.08 samples/sec	accuracy=1.000000	top_k_accuracy_5=1.000000
+./run_train_script.sh: line 50: 19011 Terminated              python train_ccs-train.py --network resnet --num-layers 34 --model-prefix ./models/resnet-34-standford-512-lr-0.01/resnet-34-standford-512-lr-0.01
