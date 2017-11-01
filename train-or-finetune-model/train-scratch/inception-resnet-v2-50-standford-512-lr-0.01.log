@@ -1,0 +1,13 @@
+[inception-resnet-v2]
+Traceback (most recent call last):
+  File "train_ccs-train.py", line 67, in <module>
+    sym = net.get_symbol(**vars(args))
+  File "/home/yuanshuai/code/kaggle-dog-breed-identification/train-or-finetune-model/train-scratch/symbols/inception-resnet-v2.py", line 127, in get_symbol
+    net = repeat(tower_5b_out, 10, block35, scale=0.17, input_num_channels=320)
+  File "/home/yuanshuai/code/kaggle-dog-breed-identification/train-or-finetune-model/train-scratch/symbols/inception-resnet-v2.py", line 97, in repeat
+    outputs = layer(outputs, *args, **kwargs)
+  File "/home/yuanshuai/code/kaggle-dog-breed-identification/train-or-finetune-model/train-scratch/symbols/inception-resnet-v2.py", line 51, in block35
+    net += scale * tower_out
+  File "/mxnet/python/mxnet/symbol.py", line 118, in __iadd__
+    raise NotImplementedForSymbol(self.__iadd__, '+=', other, 1)
+mxnet.base.NotImplementedForSymbol: Function __iadd__ (namely operator "+=") with arguments (<class 'mxnet.symbol.Symbol'>, <type 'int'>) is not implemented for Symbol and only available in NDArray.
