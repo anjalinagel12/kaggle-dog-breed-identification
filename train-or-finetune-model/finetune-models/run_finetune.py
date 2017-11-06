@@ -18,7 +18,7 @@ import mxnet as mx
 
 def get_iterators(batch_size, data_shape=(3, 128, 128)):
     train = mx.io.ImageRecordIter(
-        path_imgrec         = '../../data/mx-512-qua-99-ratio-0.95_train.rec',
+        path_imgrec         = '../../data/mx-128-qua-95-ratio-0.95_train.rec',
         data_name           = 'data',
         label_name          = 'softmax_label',
         batch_size          = batch_size,
@@ -28,7 +28,7 @@ def get_iterators(batch_size, data_shape=(3, 128, 128)):
         rand_crop           = True,
         rand_mirror         = True)
     val = mx.io.ImageRecordIter(
-        path_imgrec         = '../../data/mx-512-qua-99-ratio-0.95_val.rec',
+        path_imgrec         = '../../data/mx-128-qua-95-ratio-0.95_val.rec',
         data_name           = 'data',
         label_name          = 'softmax_label',
         batch_size          = batch_size,
@@ -103,8 +103,7 @@ def fit(symbol, arg_params, aux_params, train, val, batch_size, num_gpus, save_m
         optimizer='adam',
         optimizer_params={'learning_rate':0.01,},
         initializer=mx.init.Xavier(rnd_type='gaussian', factor_type="in", magnitude=2),
-        eval_metric=['acc','top_k_accuracy'],
-        top_k = 5)
+        eval_metric='acc')
     metric = mx.metric.Accuracy()
     return mod.score(val, metric)
 
@@ -116,7 +115,7 @@ save_model_prefix = sys.argv[3]
 
 (new_sym, new_args) = get_fine_tune_model(sym, arg_params, num_classes)
 batch_size = batch_per_gpu * num_gpus
-data_shape = (3, 512, 512)
+data_shape = (3, 128, 128)
 (train, val) = get_iterators(batch_size, data_shape)
 mod_score = fit(new_sym, new_args, aux_params, train, val, batch_size, num_gpus, save_model_prefix)
 assert mod_score > 0.77, "Low training accuracy."

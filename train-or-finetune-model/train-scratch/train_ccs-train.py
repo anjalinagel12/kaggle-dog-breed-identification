@@ -43,7 +43,7 @@ if __name__ == '__main__':
     parser.set_defaults(
         # network
         network        = 'resnet',
-        num_layers     = 101,
+        num_layers     = 50,
         # data
         data_train     = train_fname,
         data_val       = val_fname,
@@ -52,12 +52,13 @@ if __name__ == '__main__':
         image_shape    = '3,512,512',
         pad_size       = 4,
         # train
-        batch_size     = 20,
+        batch_size     = 12,
         num_epochs     = 300,
         lr             = .01,
         lr_step_epochs = '200,250',
         gpus           = "0,1,2,3",
         top_k          = 5,
+        optimizer      = "adam",
     )
     args = parser.parse_args()
 
